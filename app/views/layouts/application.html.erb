@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ImagineCms</title>
+    <%= javascript_include_tag "application" %>
+
+    <p class='notice'><%= notice %></p>
+    <p class='alert'><%= alert %></p>
+
+    <%= stylesheet_link_tag "application"%>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="outer-container">
+      <%# <%= render 'layouts/header' %>
+
+      <div class="content-wrapper">
+        <div class="content">
+          <%= render 'layouts/post_preview' %>
+          <%= yield %>
+        </div>
+      </div>
+
+      <%= render 'layouts/sidebar' %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>

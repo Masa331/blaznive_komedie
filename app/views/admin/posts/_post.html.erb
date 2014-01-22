@@ -1,0 +1,9 @@
+<li>
+  <%= content_tag :div, id: "post-#{post.id}" do -%>
+    <b><%= link_to post.title, admin_post_path(post) %></b> |
+    <%= post.publish ? 'Zveřejněno' : 'Nezveřejněno' %> |
+    <%# Kategorie: <%= post.category.title %> |
+    <%= link_to 'Smazat článek', admin_post_path(post), method: :delete %>
+    <br />
+  <% end -%>
+</li>

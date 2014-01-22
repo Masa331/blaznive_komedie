@@ -1,0 +1,54 @@
+cs:
+  activerecord:
+    attributes:
+      admin:
+        email: 'E-mail'
+        password: 'Heslo'
+      post:
+        title: 'Název'
+        text: 'Text'
+        category: 'Kategorie'
+        publish: 'Zveřejnit článek'
+      image:
+        title: 'Název obrázku'
+        image: 'Obrázek'
+      video:
+        title: 'Název videa'
+      link:
+        title: 'Název linku'
+        href: 'Link'
+
+  helpers:
+    submit:
+      admin:
+        create: 'Přihlásit'
+      post:
+        create: 'Přidat článek'
+        update: 'Upravit článek'
+      category:
+        submit: 'Vytvořit kategorii'
+        update: 'Upravit kategorii'
+      image:
+        submit: 'Vytvořit obrázek'
+        update: 'Upravit obrázek'
+      video:
+        submit: 'Vytvořit video'
+        update: 'Upravit video'
+
+  devise:
+    failure:
+      admin:
+        not_found_in_database: 'Neplatné přihlašovacví údaje'
+
+  simple_form:
+    labels:
+      category:
+        title: 'Název'
+      image:
+        title: 'Název'
+        image: 'Obrázek'
+      video:
+        title: 'Název'
+      link:
+        title: 'Název'
+        href: 'Link'

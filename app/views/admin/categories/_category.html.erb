@@ -1,0 +1,10 @@
+<li>
+  <%= content_tag :div, id: "category-#{category.id}" do -%>
+    <b><%= link_to category.title, admin_category_path(category) %>:</b>
+    Články: <%= category.posts.count %> |
+    Obrázky: <%= category.images.count %> |
+    Videa: <%= category.videos.count %> |
+    <%= link_to 'Smazat kategorii', admin_category_path(category), method: :delete %>
+    <br />
+  <% end -%>
+</li>

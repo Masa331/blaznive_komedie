@@ -1,0 +1,39 @@
+<div class="sidebar-wrapper">
+  <div class="sidebar-inner-wrapper">
+
+    <div class="logo-container">
+      <%= image_tag 'logo.png' %>
+    </div>
+
+    <div class="sidebar-content">
+      <div class="sidebar-menu">
+        <h4>Menu</h4>
+        <ul>
+          <li><%= link_to 'Domů', root_path %></li>
+          <li><%= link_to 'Seznam komedií v databázi', posts_path %></li>
+          <li><%= link_to 'Trailery a scénky', '#' %></li>
+          <li><%= link_to 'Články', '#' %></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-search">
+        <h4>Hledání</h4>
+        <%# <%= simple_form_for :post, url: '#' do |f| %>
+        <%#   <%= f.input :basic_search, label: false %>
+        <%#   <%= f.submit 'Hledat' %>
+        <%# <% end %>
+      </div>
+
+      <div class="sidebar-ad">
+        <%= image_tag 'http://placehold.it/280x250' %>
+      </div>
+
+      <div class="sidebar-links">
+        <h4>Doporučujeme</h4>
+        <%= link_to 'Harlem Shake', '#' %>
+      </div>
+
+    </div>
+
+  </div>
+</div>

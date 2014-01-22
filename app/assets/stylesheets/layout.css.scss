@@ -1,0 +1,71 @@
+@import 'bourbon';
+@import 'grid-settings';
+@import 'neat';
+
+$my_purple: rgb(195, 35, 100);
+
+body {
+  margin: 0px;
+  padding: 0px;
+  border-top: 10px solid $my_purple ;
+}
+
+.outer-container {
+  @include outer-container;
+}
+
+.content-wrapper {
+  @include span-columns(8);
+
+  .content {
+    border-left: 2px dotted rgb(243, 243, 243);
+    width: 540px;
+
+    .post-preview {
+      border-bottom: 1px solid rgb(221, 221, 221);
+      width: 540px;
+    }
+
+    .post-meta-info {
+      border-bottom: 1px solid rgb(221, 221, 221);
+    }
+  }
+}
+
+.footer {
+  border-top: 2px dotted rgb(221, 221, 221);
+  clear: both;
+
+  margin: 0px;
+  padding: 5px 0px;
+
+  .links {
+    font-size: 1.2em;
+    margin-left: 30px;
+  }
+
+  .copyright {
+    font-size: 0.7em;
+    text-align: left;
+  }
+}
+
+.sidebar-wrapper {
+  @include span-columns(4);
+  border-left: 2px dotted rgb(243, 243, 243);
+  border-right: 2px dotted rgb(243, 243, 243);
+
+  .sidebar-inner-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .logo-container {
+
+  }
+
+  .sidebar-content {
+
+  }
+}
+

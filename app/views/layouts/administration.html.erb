@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ImagineCms</title>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "administration_manifest"%>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <%= render 'layouts/administration/menu' %>
+
+      <!-- <p class='notice'><%= notice %></p> -->
+      <!-- <p class='alert'><%= alert %></p> -->
+
+      <%= yield %>
+
+      <%= render 'layouts/administration/footer' %>
+    </div>
+
+  </body>
+</html>

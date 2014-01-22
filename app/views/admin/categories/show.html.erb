@@ -1,0 +1,6 @@
+<h1><%= category.title %></h1>
+
+<%= simple_form_for category, url: admin_category_url(category), method: :patch do |f| %>
+  <%= f.input :title %>
+  <%= f.submit %>
+<% end %>

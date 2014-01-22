@@ -1,0 +1,9 @@
+<h1>Obrázky</h1>
+<div class="form">
+  <%= simple_form_for :image, url: admin_images_path do |f| %>
+    <%= f.input :title %>
+    <%= f.input :image, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
+<ul><%= render @images %></ul>
