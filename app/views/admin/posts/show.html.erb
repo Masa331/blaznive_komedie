@@ -1,9 +1,0 @@
-<h1><%= @post.title %></h1>
-
-<%= simple_form_for @post, url: admin_post_path(@post), method: :patch do |f| %>
-  <%= f.input :title %>
-  <%= f.input :text %>
-  <%= f.association :category %>
-  <%= f.input :publish %>
-  <%= f.submit %>
-<% end %>
