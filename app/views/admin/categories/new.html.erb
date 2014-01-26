@@ -1,2 +1,13 @@
-<h1>Admin::Categories#new</h1>
-<p>Find me in app/views/admin/categories/new.html.erb</p>
+<div class="row">
+  <div class="span7">
+    <h1>Nová kategorie</h1>
+    <%= simple_form_for @category, url: admin_categories_path do |f| %>
+      <%= f.input :title %>
+      <%= f.button :submit, class: 'btn-primary' %>
+    <% end %>
+  </div>
+
+  <div class="span4 well">
+    <%= link_to 'Nápověda k Markdownu', 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet' %>
+  </div>
+</div>

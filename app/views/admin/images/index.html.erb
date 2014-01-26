@@ -1,9 +1,10 @@
-<h1>Obrázky</h1>
-<div class="form">
-  <%= simple_form_for :image, url: admin_images_path do |f| %>
-    <%= f.input :title %>
-    <%= f.input :image, as: :file %>
-    <%= f.submit %>
-  <% end %>
+<div class="row">
+  <div class="span8 well">
+    <h1>Obrázky</h1>
+    <ul><%= render @images %></ul>
+  </div>
+
+  <div class="span3 well">
+    <%= link_to 'Vytvořit nový obrázek', new_admin_image_path %>
+  </div>
 </div>
-<ul><%= render @images %></ul>

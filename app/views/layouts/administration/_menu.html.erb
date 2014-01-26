@@ -1,9 +1,12 @@
-<div class="menu">
-  <ul class="nav nav-pills nav-tabs">
-    <li><%= link_to 'Članky', admin_posts_path %></li>
-    <li><%= link_to 'Kategorie', admin_categories_path %></li>
-    <li><%= link_to 'Obrázky', admin_images_path %></li>
-    <li><%= link_to 'Videa', admin_videos_path %></li>
-    <li><%= link_to 'Odhlásit se', destroy_admin_session_path, method: :delete %></li>
-  </ul>
+<div class="navbar">
+  <div class="navbar-inner">
+    <%= link_to 'Imagine Admin', '#', class: 'brand' %>
+    <ul class="nav">
+      <li><%= link_to 'Članky', admin_comedies_path %></li>
+      <li><%= link_to 'Kategorie', admin_categories_path %></li>
+      <li><%= link_to 'Obrázky', admin_images_path %></li>
+      <li><%= link_to 'Videa', admin_videos_path %></li>
+      <li><%= link_to 'Odhlásit se', destroy_admin_session_path, method: :delete %></li>
+    </ul>
+  </div>
 </div>

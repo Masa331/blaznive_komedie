@@ -1,6 +1,20 @@
-<h1><%= category.title %></h1>
+<div class="row">
+  <div class="span12 well">
+    <h1>Články v kategorii: <%= @category.title %></h1>
+    <ul>
+      <% @category.comedies.each do |p| %>
+        <li><%= link_to(p.cz_title, admin_comedy_path(p)) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
-<%= simple_form_for category, url: admin_category_url(category), method: :patch do |f| %>
-  <%= f.input :title %>
-  <%= f.submit %>
-<% end %>
+<div class="row">
+  <div class="span12 well">
+    <h2>Upravit kategorii</h2>
+    <%= simple_form_for(@category, url: admin_comedy_path(@category), method: :patch, html: { class: '' }) do |f| %>
+      <%= f.input :title %>
+      <%= f.button :submit, class: 'btn-primary' %>
+    <% end %>
+  </div>
+</div>

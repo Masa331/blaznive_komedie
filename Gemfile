@@ -30,6 +30,7 @@ gem 'therubyracer'
 gem 'simple_form'
 gem 'neat'
 gem 'bootstrap-sass', '~> 2.3'
+gem 'redcarpet'
 group :development do
   # gem 'rack-mini-profiler'# pokud je zapnuto zobrazuje v dev modu casy nacitani primo v prohlizeci
 end

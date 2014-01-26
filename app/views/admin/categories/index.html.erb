@@ -1,12 +1,10 @@
-<div class="span7">
-  <h1>Kategorie</h1>
-  <ul><%= render @categories %></ul>
-</div>
+<div class="row">
+  <div class="span8 well">
+    <h1>Kategorie</h1>
+    <ul><%= render @categories %></ul>
+  </div>
 
-<div class="span4">
-  <h4>Vytvořit novou kategorii</h4>
-    <%= simple_form_for :category, url: admin_categories_path do |f| %>
-      <%= f.input :title %>
-      <%= f.submit %>
-    <% end %>
+  <div class="span3 well">
+    <%= link_to 'Vytvořit novou kategorii', new_admin_category_path %>
+  </div>
 </div>

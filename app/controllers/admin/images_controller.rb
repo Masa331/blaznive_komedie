@@ -16,6 +16,7 @@ class Admin::ImagesController < ApplicationController
   end
 
   def create
+    require 'pry'; binding.pry
     if Image.create(permitted_params)
       redirect_to admin_images_path
     else

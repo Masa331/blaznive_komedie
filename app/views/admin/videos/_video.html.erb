@@ -1,12 +1,6 @@
 <li>
   <%= content_tag :div, id: "video-#{video.id}" do -%>
-    <b><%= link_to video.title, admin_video_path(video) %>:</b>
-    <%= simple_form_for video, url: admin_video_url(video), method: :patch do |f| %>
-      <%= f.input :title %>
-      <%= f.submit %>
-    <% end %>
-    <%= link_to 'Smazat video', admin_video_path(video), method: :delete %>
-    <br />
-    ====================
+    <b><%= link_to video.title, admin_video_path(video) %></b> |
+    <%= link_to 'Smazat video', admin_video_path(video), method: :delete, class: 'red-text' %>
   <% end -%>
 </li>

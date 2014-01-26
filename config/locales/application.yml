@@ -4,7 +4,7 @@ cs:
       admin:
         email: 'E-mail'
         password: 'Heslo'
-      post:
+      comedy:
         title: 'Název'
         text: 'Text'
         category: 'Kategorie'
@@ -22,7 +22,7 @@ cs:
     submit:
       admin:
         create: 'Přihlásit'
-      post:
+      comedy:
         create: 'Přidat článek'
         update: 'Upravit článek'
       category:
@@ -52,3 +52,6 @@ cs:
       link:
         title: 'Název'
         href: 'Link'
+    placeholders:
+      comedy:
+        title: 'Zadejte název článku'
