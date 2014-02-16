@@ -1,71 +1,117 @@
-@import 'bourbon';
-@import 'grid-settings';
-@import 'neat';
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Anaheim|Open+Sans);
 
 $my_purple: rgb(195, 35, 100);
+$my_black: #333;
 
-body {
-  margin: 0px;
-  padding: 0px;
-  border-top: 10px solid $my_purple ;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Anaheim, Open Sans;
+  a {
+    color: black;
+  }
+  a:hover {
+    color: $my_purple;
+  }
 }
 
-.outer-container {
-  @include outer-container;
+a {
+  color: $my_purple;
 }
 
-.content-wrapper {
-  @include span-columns(8);
+a:hover {
+  color: $my_purple;
+  text-decoration: underline;
+}
 
-  .content {
-    border-left: 2px dotted rgb(243, 243, 243);
-    width: 540px;
+.my_nav {
+  a {
+    font-family: Anaheim, Open Sans;
+    font-size: 1.1em;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    font-weight: bold;
+  }
 
-    .comedy-preview {
-      border-bottom: 1px solid rgb(221, 221, 221);
-      width: 540px;
+  a:hover {
+    color: $my_purple;
+  }
+}
+
+.header {
+  height: 35px;
+  margin-bottom:15px;
+  margin-top:10px;
+  border-bottom: solid 2px $my_purple;
+}
+
+.logo {
+  margin-top: -5px;
+
+}
+
+article {
+  .head {
+    border-bottom: solid 1px $my_black;
+    margin-bottom: 5px;
+    .small {
+      font-size: 0.9em;
+      margin-bottom: 3px;
     }
-
-    .comedy-meta-info {
-      border-bottom: 1px solid rgb(221, 221, 221);
+    h2 {
+      margin-bottom: 0px;
     }
   }
 }
 
-.footer {
-  border-top: 2px dotted rgb(221, 221, 221);
-  clear: both;
+.sad-meme {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 
-  margin: 0px;
-  padding: 5px 0px;
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
 
-  .links {
-    font-size: 1.2em;
-    margin-left: 30px;
+
+aside {
+  #search-form {
+    width: 280px;
   }
 
-  .copyright {
-    font-size: 0.7em;
-    text-align: left;
+  .my-button {
+    background-color: $my_purple;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    border: none;
+    color: white;
+  }
+
+  h5 {
+    margin-top: 20px;
+  }
+
+  &.admin {
+    margin-top: 20px;
   }
 }
 
-.sidebar-wrapper {
-  @include span-columns(4);
-  border-left: 2px dotted rgb(243, 243, 243);
-  border-right: 2px dotted rgb(243, 243, 243);
-
-  .sidebar-inner-wrapper {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .logo-container {
-
-  }
-
-  .sidebar-content {
-
-  }
+label.inline {
+  display: inline;
+  margin-right: 15px;
 }
 
+.comedy-edit-area {
+  height: 120px;
+}
+
+.post-text-area {
+  height: 400px;
+}
+
+.post-text-area {
+  height: 120;
+}

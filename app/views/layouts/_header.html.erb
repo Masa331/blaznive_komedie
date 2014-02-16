@@ -1,3 +1,21 @@
-<div class="header">
-  Header
+<div class="row header">
+  <div class="large-5 columns">
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag 'logo_thin.png' %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="large-7 columns">
+    <div class="my_nav right">
+      <ul class="button-group">
+        <li><%= link_to 'Seznam komedií', list_comedies_path %></li>
+        <li><%= link_to 'Trailery a scénky', videos_path %></li>
+        <li><%= link_to 'Plakáty', images_path %></li>
+        <li><%= link_to 'Články', posts_path %></li>
+      </ul>
+    </div>
+  </div>
+
 </div>

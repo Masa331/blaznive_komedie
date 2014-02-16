@@ -2,25 +2,25 @@
 <html>
   <head>
     <title>ImagineCms</title>
+    <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
-    <%= stylesheet_link_tag "administration_manifest"%>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
 
-    <div class="container">
 
-      <%= render 'layouts/administration/menu' %>
+    <%= render 'layouts/administration/header' %>
 
-      <% if flash.any? %>
-        <p class='notice'><%= notice %></p>
-        <p class='alert'><%= alert %></p>
-      <% end %>
+    <% if flash.any? %>
+      <p class='notice'><%= notice %></p>
+      <p class='alert'><%= alert %></p>
+    <% end %>
 
-      <%= yield %>
+    <%= yield %>
 
-      <%= render 'layouts/administration/footer' %>
-    </div>
+    <%= render 'layouts/administration/footer' %>
 
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

@@ -27,4 +27,15 @@ ImagineCms::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  # Bullet
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = false
+    Bullet.bullet_logger = false
+    Bullet.console = true
+    Bullet.growl = false
+    Bullet.rails_logger = false
+    Bullet.airbrake = false
+    Bullet.add_footer = true
+  end
 end

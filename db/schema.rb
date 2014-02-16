@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140126092103) do
+ActiveRecord::Schema.define(version: 20140212161645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20140126092103) do
 
   create_table "images", force: true do |t|
     t.string   "title"
-    t.integer  "category_id"
     t.integer  "comedy_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -61,7 +60,7 @@ ActiveRecord::Schema.define(version: 20140126092103) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "alt"
-    t.string   "caption"
+    t.boolean  "publish"
   end
 
   create_table "links", force: true do |t|
@@ -71,12 +70,21 @@ ActiveRecord::Schema.define(version: 20140126092103) do
     t.datetime "updated_at"
   end
 
+  create_table "posts", force: true do |t|
+    t.text     "text"
+    t.string   "title"
+    t.boolean  "publish"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "preface"
+  end
+
   create_table "videos", force: true do |t|
     t.string   "title"
-    t.integer  "category_id"
     t.integer  "comedy_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "publish"
   end
 
   create_table "wp_posts", id: false, force: true do |t|

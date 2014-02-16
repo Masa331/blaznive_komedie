@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="span7">
+<div class="row panel">
+  <div class="large-12 columns">
     <h1>Nové video</h1>
     <%= simple_form_for :video, url: admin_videos_path do |f| %>
       <%= f.input :title %>
@@ -8,9 +8,5 @@
       <% end %>
       <%= f.submit %>
     <% end %>
-  </div>
-
-  <div class="span4 well">
-    <%= link_to 'Nápověda k Markdownu', 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet' %>
   </div>
 </div>

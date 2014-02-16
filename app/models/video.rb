@@ -1,5 +1,16 @@
+# == Schema Information
+#
+# Table name: videos
+#
+#  id         :integer          not null, primary key
+#  title      :string(255)
+#  comedy_id  :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  publish    :boolean
+#
+
 class Video < ActiveRecord::Base
-  belongs_to :category
   belongs_to :comedy
   has_one :link
 
@@ -8,7 +19,5 @@ class Video < ActiveRecord::Base
   validates :title, presence: true
   validates :link, presence: true
 
-  def iframe_options
-    { src: link.href, height: 281, width: 500, allowfullscreen: '', frameborder: 0 }
-  end
+  scope :publicable, -> { where(publish: true) }
 end

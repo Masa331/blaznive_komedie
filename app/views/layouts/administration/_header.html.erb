@@ -1,0 +1,21 @@
+<div class="fixed">
+  <div class="top-bar" data-topbar>
+
+    <ul class='title-area'>
+      <li class='name'><h1><%= link_to 'Imagine Admin', '#', class: 'brand' %></h1></li>
+    </ul>
+
+    <% admin_area do %>
+      <section class='top-bar-section'>
+        <ul class="right">
+          <li><%= link_to 'Komedie', admin_comedies_path %></li>
+          <li><%= link_to 'Kategorie', admin_categories_path %></li>
+          <li><%= link_to 'Obrázky', admin_images_path %></li>
+          <li><%= link_to 'Videa', admin_videos_path %></li>
+          <li><%= link_to 'Články', admin_posts_path %></li>
+          <li><%= link_to 'Odhlásit se', destroy_admin_session_path, method: :delete %></li>
+        </ul>
+      </section>
+    <% end %>
+  </div>
+</div>

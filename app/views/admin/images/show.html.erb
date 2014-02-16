@@ -1,20 +1,28 @@
-<div class="row">
-  <div class="span12 well">
-    <h1>Obrázek: <%= @image.title %></h1>
-    Článek: <%= link_to @image.comedy.cz_title, admin_comedy_path(@image.comedy) %> |
+<div class="row panel">
+  <div class="large-12 columns">
+    <h2>Upravit obrázek</h2>
+    <%= simple_form_for(@image, url: admin_image_path(@image), method: :patch) do |f| %>
+      <%= f.input :title %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row panel">
+  <div class="large-12 columns">
+    <h1><%= @image.title %></h1>
+
+    <% if @image.comedy %>
+      Článek: <%= link_to @image.comedy.cz_title, admin_comedy_path(@image.comedy) %> |
+    <% end %>
+
+    <div class="panel">
+      <%= @image.image.url %>
+    </div>
+
     <%= link_to 'Smazat obrázek', admin_image_path(@image), method: :delete, class: 'red-text' %>
     <div>
       <%= image_tag @image.image.url %>
     </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="span12 well">
-    <h2>Upravit obrázek</h2>
-    <%= simple_form_for(@image, url: admin_image_path(@image), method: :patch) do |f| %>
-      <%= f.input :title, input_html: { class: 'span8'} %>
-      <%= f.button :submit, class: 'btn-primary' %>
-    <% end %>
   </div>
 </div>

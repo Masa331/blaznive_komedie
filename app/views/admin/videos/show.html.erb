@@ -1,23 +1,23 @@
-<div class="row">
-  <div class="span12 well">
-    <h1><%= @video.title %></h1>
-    Článek: <%= link_to @video.comedy.cz_title, admin_comedy_path(@video.comedy) %> |
-    <%= link_to 'Smazat video', admin_video_path(@video), method: :delete, class: 'red-text' %>
-    <div>
-      <%= content_tag(:iframe, nil, @video.iframe_options) %>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="span12 well">
+<div class="row panel">
+  <div class="large-12 columns">
     <h2>Úpravy</h2>
 
     <%= simple_form_for(@video, url: admin_video_path(@video), method: :patch) do |f| %>
       <%= f.fields_for @video.link do |ff| %>
-        <%= ff.input :href, input_html: { class: 'span8'} %>
+        <%= ff.input :href %>
       <% end %>
-      <%= f.button :submit, class: 'btn-primary' %>
+      <%= f.button :submit %>
     <% end %>
+  </div>
+</div>
+
+<div class="row panel">
+  <div class="large-12 columns">
+    <h1><%= @video.title %></h1>
+    Článek: <%= link_to @video.comedy.cz_title, admin_comedy_path(@video.comedy) %> |
+    <%= link_to 'Smazat video', admin_video_path(@video), method: :delete, class: 'red-text' %>
+    <div>
+      <%= video_iframe(@video) %>
+    </div>
   </div>
 </div>

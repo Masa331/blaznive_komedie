@@ -8,7 +8,7 @@ cs:
         title: 'Název'
         text: 'Text'
         category: 'Kategorie'
-        publish: 'Zveřejnit článek'
+        publish: 'Zveřejnit komedii'
       image:
         title: 'Název obrázku'
         image: 'Obrázek'
@@ -23,8 +23,8 @@ cs:
       admin:
         create: 'Přihlásit'
       comedy:
-        create: 'Přidat článek'
-        update: 'Upravit článek'
+        create: 'Přidat komedii'
+        update: 'Upravit komedii'
       category:
         submit: 'Vytvořit kategorii'
         update: 'Upravit kategorii'
@@ -34,6 +34,8 @@ cs:
       video:
         submit: 'Vytvořit video'
         update: 'Upravit video'
+      search:
+        submit: 'Hledat'
 
   devise:
     failure:
@@ -54,4 +56,14 @@ cs:
         href: 'Link'
     placeholders:
       comedy:
-        title: 'Zadejte název článku'
+        title: 'Zadejte název komedie'
+      search:
+        title_search: 'Český nebo anglický název komedie'
+
+  views:
+    pagination:
+      first: "&laquo; První"
+      last: "Poslední &raquo;"
+      previous: "&lsaquo; Předchozí"
+      next: "Další &rsaquo;"
+      truncate: "..."

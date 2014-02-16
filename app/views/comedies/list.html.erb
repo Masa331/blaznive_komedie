@@ -1,0 +1,27 @@
+<%= title 'Seznam komedií' %>
+
+<div class="panel">
+  <h3>Hledání</h3>
+  <%= simple_form_for :search, url: list_comedies_path, method: :get do |f| %>
+    <%= f.input :title_search, required: false, input_html: { id: 'search-form'} %>
+    <%= f.input :category_search, collection: categories_for_select, as: :radio_buttons, required: false, item_wrapper_class: 'inline' %>
+    <%# <%= f.input :category_search, collection: categories_for_select, as: :radio_buttons, required: false %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
+<% if @comedies.blank? %>
+  <h3>Bohužel pro Vaše hledání "<%= params[:search][:title_search] %>" jsme nenalezli žádné výsledky</h3>
+  <div class='text-center sad-meme'><%= image_tag 'sad-face.png', width: 300 %></div>
+  <p>Zkuste to prosím znovu s jinými parametry nebo se podívejte do <%= link_to 'seznamu komedií', list_comedies_path %>.</p>
+<% else %>
+  <%# <% paramsp[:search] nejsou %>
+  <h3>Seznam komedií</h3>
+  <div class="comedies-list">
+    <ul>
+      <% @comedies.each do |comedy| %>
+        <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

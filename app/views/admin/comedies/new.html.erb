@@ -1,17 +1,13 @@
-<div class="row">
-  <div class="span7">
-    <h1>Nový článek</h1>
+<div class="row panel">
+  <div class="large-12 columns">
+    <h1>Nová komedie</h1>
     <%= simple_form_for @comedy, url: admin_comedies_path do |f| %>
       <%= f.input :publish %>
-      <%= f.association :category, as: :radio_buttons %>
-      <%= f.input :cz_title, input_html: { class: 'span6'} %>
-      <%= f.input :en_title, input_html: { class: 'span6'} %>
-      <%= f.input :text, input_html: { class: 'span6', rows: 10 } %>
-      <%= f.button :submit, class: 'btn-primary' %>
+      <%= f.association :category, as: :radio_buttons, item_wrapper_class: 'inline' %>
+      <%= f.input :cz_title %>
+      <%= f.input :en_title %>
+      <%= f.input :text, input_html: { class: 'comedy-edit-area' } %>
+      <%= f.button :submit %>
     <% end %>
-  </div>
-
-  <div class="span4 well">
-    <%= link_to 'Nápověda k Markdownu', 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet' %>
   </div>
 </div>

@@ -1,0 +1,7 @@
+<li>
+  <div id=<%= "post-#{post.id}" %> >
+    <b><%= link_to post.title, admin_post_path(post) %></b> |
+    <%= post.publish ? 'Zveřejněno' : 'Nezveřejněno' %>|
+    <%= link_to 'Smazat článek', admin_post_path(post), method: :delete, class: 'red-text' %>
+  </div>
+</li>
