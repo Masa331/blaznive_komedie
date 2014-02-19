@@ -9,7 +9,6 @@ gem 'paperclip'
 
 gem 'pg'
 
-gem 'simple_search', path: '~/pracovni/rails_apps/simple_search'
 # gem "exception_notification-debugger"
 
 # Authentication
@@ -23,7 +22,9 @@ gem 'simple_form'
 gem 'redcarpet'
 gem 'kaminari'
 
+
 group :development do
+  gem 'capistrano-rails', '~> 1.0.0'
   gem 'rack-mini-profiler'
   gem 'bullet'
   gem 'better_errors'
