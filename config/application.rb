@@ -27,5 +27,7 @@ module ImagineCms
       Devise::UnlocksController.layout 'administration'
       Devise::PasswordsController.layout 'administration'
     end
+
+    config.assets.initialize_on_precompile = false
   end
 end
