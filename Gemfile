@@ -24,7 +24,10 @@ gem 'kaminari'
 
 
 group :development do
+  gem 'capistrano', '~> 3.1'
   gem 'capistrano-rails', '~> 1.0.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler', '~> 1.1.2'
   gem 'rack-mini-profiler'
   gem 'bullet'
   gem 'better_errors'
