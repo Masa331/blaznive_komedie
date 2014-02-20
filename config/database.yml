@@ -1,14 +1,21 @@
-development:
+production:
   adapter: postgresql
   encoding: unicode
   database: imagine_cms_dev
   pool: 5
-  username: imagine_cms
-  password: imabeer91
+  username:
+  password:
+development:
+  adapter: postgresql
+  encoding: unicode
+  database:
+  pool: 5
+  username:
+  password:
 test:
   adapter: postgresql
   encoding: unicode
-  database: imagine_cms_test
+  database:
   pool: 5
-  username: imagine_cms
-  password: imabeer91
+  username:
+  password:
