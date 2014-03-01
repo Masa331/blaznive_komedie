@@ -139,7 +139,7 @@ module ImagineCms
       "vanocni-skritek-elf",
       "na-doraz-due-date"]
 
-    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+    config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
       old_slugs.each do |slug|
         r301 "/#{slug}", "/comedies/#{slug}"
       end
