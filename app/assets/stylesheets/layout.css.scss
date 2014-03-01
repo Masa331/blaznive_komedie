@@ -102,6 +102,8 @@ aside {
 label.inline {
   display: inline;
   margin-right: 15px;
+  white-space: nowrap;
+  float: left;
 }
 
 .comedy-edit-area {
@@ -114,4 +116,41 @@ label.inline {
 
 .post-text-area {
   height: 120;
+}
+
+.inputs {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+fieldset {
+  ol {
+    list-style-type: none;
+    border: none;
+    margin-left: 0px;
+  }
+}
+
+fieldset.actions {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  ol {
+    margin-bottom: 0px;
+  }
+}
+
+fieldset.choices {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  li {
+    float: left;
+    width: 110px;
+  }
+
+  ol {
+    margin-left: 0px;
+  }
 }

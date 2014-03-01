@@ -8,6 +8,8 @@ gem 'jquery-rails'
 gem 'paperclip'
 
 gem 'pg'
+gem 'rack-rewrite', '~> 1.2.1'
+gem 'friendly_id', '~> 5.0.0'
 
 # gem "exception_notification-debugger"
 
@@ -18,7 +20,8 @@ gem 'therubyracer'
 
 # Views
 gem 'foundation-rails'
-gem 'simple_form'
+# gem 'simple_form'
+gem 'formtastic'
 gem 'redcarpet'
 gem 'kaminari'
 

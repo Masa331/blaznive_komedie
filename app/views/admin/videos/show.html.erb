@@ -2,7 +2,7 @@
   <div class="large-12 columns">
     <h2>Úpravy</h2>
 
-    <%= simple_form_for(@video, url: admin_video_path(@video), method: :patch) do |f| %>
+    <%= semantic_form_for(@video, url: admin_video_path(@video), method: :patch) do |f| %>
       <%= f.fields_for @video.link do |ff| %>
         <%= ff.input :href %>
       <% end %>

@@ -1,9 +1,9 @@
 <div class="row panel">
   <div class="large-12 columns">
     <h1>Nová komedie</h1>
-    <%= simple_form_for @comedy, url: admin_comedies_path do |f| %>
+    <%= semantic_form_for @comedy, url: admin_comedies_path do |f| %>
       <%= f.input :publish %>
-      <%= f.association :category, as: :radio_buttons, item_wrapper_class: 'inline' %>
+      <%= f.input :category, as: :radio, item_wrapper_class: 'inline' %>
       <%= f.input :cz_title %>
       <%= f.input :en_title %>
       <%= f.input :text, input_html: { class: 'comedy-edit-area' } %>

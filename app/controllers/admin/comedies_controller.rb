@@ -4,7 +4,7 @@ class Admin::ComediesController < ApplicationController
   layout 'administration'
 
   def show
-    @comedy = Comedy.find(params[:id])
+    @comedy = Comedy.friendly.find(params[:id])
   end
 
   def index
@@ -25,11 +25,11 @@ class Admin::ComediesController < ApplicationController
   end
 
   def edit
-    @comedy = Comedy.find(params[:id])
+    @comedy = Comedy.friendly.find(params[:id])
   end
 
   def update
-    @comedy = Comedy.find(params[:id])
+    @comedy = Comedy.friendly.find(params[:id])
     if @comedy.update_attributes(permitted_params)
       redirect_to admin_comedies_path
     else
@@ -38,7 +38,7 @@ class Admin::ComediesController < ApplicationController
   end
 
   def destroy
-    comedy = Comedy.find(params[:id])
+    comedy = Comedy.friendly.find(params[:id])
     if comedy.destroy
       redirect_to admin_comedies_path
     else
@@ -49,6 +49,6 @@ class Admin::ComediesController < ApplicationController
   private
 
   def permitted_params
-    params.require(:comedy).permit(:title, :text, :category_id, :publish)
+    params.require(:comedy).permit(:cz_title, :en_title, :text, :category_id, :publish)
   end
 end

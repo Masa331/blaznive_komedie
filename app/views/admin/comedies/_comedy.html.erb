@@ -1,6 +1,6 @@
 <li>
   <div id=<%= "comedy-#{comedy.id}" %> >
-    <b><%= link_to comedy.cz_title, admin_comedy_path(comedy) %></b> |
+    <b><%= link_to comedy.bilingual_title, admin_comedy_path(comedy) %></b> |
     <%= comedy.publish ? 'Zveřejněno' : 'Nezveřejněno' %> |
     Kategorie: <%= link_to comedy.category.title, admin_category_path(comedy.category) %> |
     <%= link_to 'Smazat komedii', admin_comedy_path(comedy), method: :delete, class: 'red-text' %>

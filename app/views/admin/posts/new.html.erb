@@ -1,7 +1,7 @@
 <div class="row panel">
   <div class="large-12 columns">
     <h1>Nový článek</h1>
-    <%= simple_form_for @post, url: admin_posts_path do |f| %>
+    <%= semantic_form_for @post, url: admin_posts_path do |f| %>
       <%= f.input :publish %>
       <%= f.input :title %>
       <%= f.input :preface, input_html: { class: 'post-preface-area' } %>

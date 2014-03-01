@@ -1,7 +1,7 @@
 <div class="row panel">
   <div class="large-12 columns">
     <h2>Upravit obrázek</h2>
-    <%= simple_form_for(@image, url: admin_image_path(@image), method: :patch) do |f| %>
+    <%= semantic_form_for(@image, url: admin_image_path(@image), method: :patch) do |f| %>
       <%= f.input :title %>
       <%= f.button :submit %>
     <% end %>

@@ -1,7 +1,7 @@
 <div class="row panel">
   <div class="large-12 columns">
     <h2>Úpravy</h2>
-    <%= simple_form_for(@post, url: admin_post_path(@post), method: :patch) do |f| %>
+    <%= semantic_form_for(@post, url: admin_post_path(@post), method: :patch) do |f| %>
       <%= f.input :publish %>
       <%= f.input :title%>
       <%= f.input :preface, input_html: { class: 'post-preface-area' } %>
@@ -17,6 +17,8 @@
     <%= @post.publish ? 'Zveřejněno' : 'Nezveřejněno' %> |
     <%= link_to 'Smazat článek', admin_post_path(@post), method: :delete, class: 'red-text' %>
 
+    <%= raw markdown.render(@post.preface) %>
+    <hr />
     <%= raw markdown.render(@post.text) %>
   </div>
 </div>

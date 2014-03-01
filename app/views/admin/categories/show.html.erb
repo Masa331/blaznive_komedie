@@ -12,7 +12,7 @@
 <div class="row">
   <div class="span12 well">
     <h2>Upravit kategorii</h2>
-    <%= simple_form_for(@category, url: admin_comedy_path(@category), method: :patch, html: { class: '' }) do |f| %>
+    <%= semantic_form_for(@category, url: admin_comedy_path(@category), method: :patch, html: { class: '' }) do |f| %>
       <%= f.input :title %>
       <%= f.button :submit, class: 'btn-primary' %>
     <% end %>

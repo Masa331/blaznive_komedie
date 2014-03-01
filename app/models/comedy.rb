@@ -13,13 +13,14 @@
 #
 
 class Comedy < ActiveRecord::Base
+  include FriendlyId
+  friendly_id :bilingual_title, use: :slugged
+
   has_one :image
   has_one :video
 
   belongs_to :category
 
-  validates :cz_title,
-    presence: true
   validates :category,
     presence: true
   validates :text,
@@ -33,9 +34,7 @@ class Comedy < ActiveRecord::Base
   end
 
   def bilingual_title
-    # TODO predelat naopak - pokud je jeden title, tak je to en ne cz
-    return cz_title unless en_title
-    [ cz_title, en_title ].join(' - ')
+    [ cz_title, en_title ].compact.join(' - ')
   end
 
 end

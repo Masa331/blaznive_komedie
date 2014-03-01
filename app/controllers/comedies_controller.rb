@@ -1,6 +1,6 @@
 class ComediesController < ApplicationController
   def show
-    @comedy = Comedy.find(params[:id])
+    @comedy = Comedy.friendly.find(params[:id])
   end
 
   def index

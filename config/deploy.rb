@@ -22,13 +22,15 @@ set :deploy_to, '/var/www/blaznive_komedie'
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp public/system}
 
 # Default value for default_env is {}
 set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -48,6 +50,14 @@ namespace :deploy do
     end
   end
 
+  # desc 'Create database config symlink'
+  # task :create_database_config_symlink do
+  #   on roles(:app) do
+  #     run "ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+  #   end
+  # end
+
+  # after :deploy, :create_database_config_symlink
   after :publishing, :restart
 
   after :restart, :clear_cache do
@@ -58,5 +68,4 @@ namespace :deploy do
       # end
     end
   end
-
 end

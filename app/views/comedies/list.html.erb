@@ -2,11 +2,16 @@
 
 <div class="panel">
   <h3>Hledání</h3>
-  <%= simple_form_for :search, url: list_comedies_path, method: :get do |f| %>
-    <%= f.input :title_search, required: false, input_html: { id: 'search-form'} %>
-    <%= f.input :category_search, collection: categories_for_select, as: :radio_buttons, required: false, item_wrapper_class: 'inline' %>
-    <%# <%= f.input :category_search, collection: categories_for_select, as: :radio_buttons, required: false %>
-    <%= f.button :submit %>
+  <%= semantic_form_for :search, url: list_comedies_path, method: :get do |f| %>
+    <%= f.inputs do %>
+      <%= f.input :title_search, label: false, placeholder: 'Zadejte český nebo anglický název' %>
+      <h4>Kategorie</h4>
+      <%= f.input :category_search,label: false, collection: categories_for_select, as: :radio %>
+    <% end %>
+
+    <%= f.actions do %>
+      <%= f.action :submit, as: :button, button_html: { class: 'button' }, label: :search_submit %>
+    <% end %>
   <% end %>
 </div>
 
