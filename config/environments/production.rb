@@ -84,7 +84,7 @@ ImagineCms::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  Whatever::Application.config.middleware.use ExceptionNotification::Rack,
+  config.middleware.use ExceptionNotification::Rack,
     :email => {
     :email_prefix => "[Blaznive_komedie::Error] ",
     :sender_address => %{"notifier" <notifier@example.com>},

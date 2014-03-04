@@ -1,0 +1,7 @@
+address: "smtp.gmail.com"
+domain: "gmail.com"
+user_name: ""
+password: ""
+port: 587
+authentication: 'plain'
+enable_starttls_auto: true
