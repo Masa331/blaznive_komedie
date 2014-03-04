@@ -143,6 +143,10 @@ module ImagineCms
       old_slugs.each do |slug|
         r301 "/#{slug}", "/comedies/#{slug}"
       end
+
+      r301 '/abecedni-seznam-komedii', '/comedies/list'
+      r301 '/category/trailery-a-scenky', '/videos'
+      r301 '/category/clanky', '/posts'
     end
 
   end

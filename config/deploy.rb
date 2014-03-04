@@ -50,14 +50,15 @@ namespace :deploy do
     end
   end
 
-  # desc 'Create database config symlink'
-  # task :create_database_config_symlink do
-  #   on roles(:app) do
-  #     run "ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
-  #   end
-  # end
+  namespace :config do
+    desc "Symlink s3 config."
+    task :smtp_settings_symlink, :except => { :no_release => true } do
+      run "ln -nfs #{shared_path}/config/smtp_settings.yml #{latest_release}/config/smtp_settings.yml"
+    end
 
-  # after :deploy, :create_database_config_symlink
+    after "deploy:finalize_update", "config:smtp_settings_symlink"
+  end
+
   after :publishing, :restart
 
   after :restart, :clear_cache do

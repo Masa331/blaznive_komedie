@@ -10,6 +10,8 @@ gem 'paperclip'
 gem 'pg'
 gem 'rack-rewrite', '~> 1.2.1'
 gem 'friendly_id', '~> 5.0.0'
+gem 'exception_notification'
+
 
 # gem "exception_notification-debugger"
 
