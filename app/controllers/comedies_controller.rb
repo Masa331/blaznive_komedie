@@ -19,9 +19,6 @@ class ComediesController < ApplicationController
 
   private
 
-  def load_random_comedies
-    @random_comedies = Comedy.random
-  end
 
   def search_params
     params.permit(search: [ :title_search, :category_search ]).fetch(:search, {})

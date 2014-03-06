@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     admin_comedies_path
   end
+
+  private
+
+  def load_random_comedies
+    @random_comedies = Comedy.random
+  end
 end
