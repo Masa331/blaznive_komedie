@@ -1,6 +1,11 @@
 class ComediesController < ApplicationController
+
+  before_filter :load_random_comedies
+
   def show
     @comedy = Comedy.friendly.find(params[:id])
+    @next_comedy = Comedy.next_by_id(@comedy.id)
+    @previous_comedy = Comedy.previous_by_id(@comedy.id)
   end
 
   def index
@@ -13,6 +18,10 @@ class ComediesController < ApplicationController
   end
 
   private
+
+  def load_random_comedies
+    @random_comedies = Comedy.random
+  end
 
   def search_params
     params.permit(search: [ :title_search, :category_search ]).fetch(:search, {})

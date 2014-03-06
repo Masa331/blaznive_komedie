@@ -9,11 +9,15 @@
     <%= image_tag_with_options(@comedy.image) %>
   <% end %>
 
-  <p>
-    <%= raw markdown.render(@comedy.text) %>
-  </p>
+  <p><%= raw markdown.render(@comedy.text) %></p>
 
   <h3>Trailer</h3>
   <%= video_iframe(@comedy.video)  %>
 
+  <hr />
+
+  <div class="next-previous">
+    <%= next_comedy_link(@next_comedy) %>
+    <%= previous_comedy_link(@previous_comedy) %>
+  </div>
 </article>

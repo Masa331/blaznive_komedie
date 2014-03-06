@@ -3,5 +3,14 @@
   <a href="http://tracking.espoluprace.cz/aff_c?offer_id=370&aff_id=6346&file_id=8180" target="_blank"><img src="http://media.go2speed.org/brand/files/espolupracecz/370/bonami_300250.jpg" width="300" height="250" border="0" /></a><img src="http://tracking.espoluprace.cz/aff_i?offer_id=370&aff_id=6346&file_id=8180" width="1" height="1" />
 
   <h5>Doporučujeme</h5>
-  <%= link_to 'Trikobraní', 'http://www.trikobrani.cz' %>
+  <%= link_to 'Trikobraní', 'http://www.trikobrani.cz_comedies' %>
+
+  <h5>Náhodné komedie</h5>
+  <ul class='no-margin'>
+    <% @random_comedies.each do |comedy| %>
+      <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+    <% end %>
+  </ul>
+
+
 </aside>
