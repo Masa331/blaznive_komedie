@@ -13,8 +13,6 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'exception_notification'
 
 
-# gem "exception_notification-debugger"
-
 # Authentication
 gem 'devise'
 
@@ -22,7 +20,6 @@ gem 'therubyracer'
 
 # Views
 gem 'foundation-rails'
-# gem 'simple_form'
 gem 'formtastic'
 gem 'redcarpet'
 gem 'kaminari'

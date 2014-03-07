@@ -17,7 +17,7 @@
   <hr />
 
   <div class="next-previous">
-    <%= next_comedy_link(@next_comedy) %>
-    <%= previous_comedy_link(@previous_comedy) %>
+    <%= next_comedy_link(@next_comedy) if @next_comedy %>
+    <%= previous_comedy_link(@previous_comedy) if @previous_comedy%>
   </div>
 </article>

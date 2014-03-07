@@ -20,12 +20,11 @@ class Image < ActiveRecord::Base
 
   validates :title, presence: true
 
-  scope :publicable, -> { where(publish: true) }
-  scope :comedy_poster, -> { where.not(comedy_id: nil) }
-
   has_attached_file :image, styles: { basic: '300x400'}
   validates_attachment :image, presence: true,
     content_type: { content_type: [ 'image/jpeg', 'image/png', 'image/gif' ] },
     size: { in: 0..1.megabytes}
 
+  scope :publicable, -> { where(publish: true) }
+  scope :comedy_poster, -> { where.not(comedy_id: nil) }
 end

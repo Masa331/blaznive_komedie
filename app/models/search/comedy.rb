@@ -10,6 +10,7 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  en_title    :string(255)
+#  slug        :string(255)
 #
 
 class Search::Comedy

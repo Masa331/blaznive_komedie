@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   private
 
   def load_random_comedies
-    @random_comedies = Comedy.random
+    @random_comedies = Comedy.publicable.random
   end
 end

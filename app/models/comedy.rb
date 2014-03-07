@@ -10,6 +10,7 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  en_title    :string(255)
+#  slug        :string(255)
 #
 
 class Comedy < ActiveRecord::Base
@@ -21,8 +22,15 @@ class Comedy < ActiveRecord::Base
 
   belongs_to :category
 
+  validates :image,
+    presence: true
+
+  validates :video,
+    presence: true
+
   validates :category,
     presence: true
+
   validates :text,
     presence: true,
     length: { minimum: 100 }

@@ -3,11 +3,12 @@
 # Table name: posts
 #
 #  id         :integer          not null, primary key
-#  text       :string(255)
+#  text       :text
 #  title      :string(255)
 #  publish    :boolean
 #  created_at :datetime
 #  updated_at :datetime
+#  preface    :text
 #
 
 class Post < ActiveRecord::Base
