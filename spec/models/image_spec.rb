@@ -40,11 +40,12 @@ describe Image do
 
   describe '.comedy_poster' do
     it "returns images which have comedy parent" do
-      comedy = create(:comedy)
+      comedy = create(:comedy, image: create(:image))
       image = comedy.image
-      image_without_comedy = create(:image, publish: false)
+      image_without_comedy = create(:image)
 
       expect(Image.comedy_poster).to eq [ image ]
     end
   end
+
 end

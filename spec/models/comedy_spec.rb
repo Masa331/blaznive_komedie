@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Comedy do
-  it { expect(subject).to have_one :video }
-  it { expect(subject).to validate_presence_of :video }
+  # it { expect(subject).to have_one :video }
+  # it { expect(subject).to validate_presence_of :video }
 
-  it { expect(subject).to have_one :image }
-  it { expect(subject).to validate_presence_of :image }
+  # it { expect(subject).to have_one :image }
+  # it { expect(subject).to validate_presence_of :image }
 
   it { expect(subject).to validate_presence_of :text }
   it { expect(subject).to ensure_length_of(:text).is_at_least(100) }
@@ -31,7 +31,6 @@ describe Comedy do
       expect(Comedy.title_search('pilot')).to eq [ en_comedy, cz_comedy ]
     end
   end
-
 
   describe '.next_by_id' do
     it "returns next comedy by id" do
@@ -64,6 +63,24 @@ describe Comedy do
     end
 
     it "defaultly returns 5 random comedies"
+  end
+
+  describe '.without_image' do
+    it 'returns comedies without image' do
+      comedy_with_image = create(:comedy, image: create(:image))
+      comedy = create(:comedy)
+
+      expect(Comedy.without_image).to eq [ comedy ]
+    end
+  end
+
+  describe '.without_video' do
+    it 'returns comedies without video' do
+      comedy_with_video = create(:comedy, video: create(:video))
+      comedy = create(:comedy)
+
+      expect(Comedy.without_video).to eq [ comedy ]
+    end
   end
 
   describe "#bilingual_title" do

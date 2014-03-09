@@ -10,14 +10,14 @@ describe 'visitor in comedies' do
   end
 
   it "sees published comedies on index" do
-    comedy = create(:comedy, publish: true, cz_title: 'Slunce seno')
+    comedy = create(:comedy_with_image, publish: true, cz_title: 'Slunce seno')
     visit comedies_path
 
     expect(page).to have_content 'Slunce seno'
   end
 
   it 'shows comedy page' do
-    comedy = create(:comedy, cz_title: 'Slunce seno', en_title: 'Sun haystack')
+    comedy = create(:comedy_with_image_and_video, cz_title: 'Slunce seno', en_title: 'Sun haystack')
     visit comedy_path(comedy)
 
     expect(page).to have_content comedy.text

@@ -3,6 +3,7 @@
     <h2>Úpravy</h2>
 
     <%= semantic_form_for(@video, url: admin_video_path(@video), method: :patch) do |f| %>
+      <%= f.input :comedy, as: :select, collection: Hash[ Comedy.without_video.map{ |c| [ c.bilingual_title,c.id ] } ] %>
       <%= f.fields_for @video.link do |ff| %>
         <%= ff.input :href %>
       <% end %>

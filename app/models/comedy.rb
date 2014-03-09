@@ -22,11 +22,11 @@ class Comedy < ActiveRecord::Base
 
   belongs_to :category
 
-  validates :image,
-    presence: true
+  # validates :image,
+  #   presence: true
 
-  validates :video,
-    presence: true
+  # validates :video,
+  #   presence: true
 
   validates :category,
     presence: true
@@ -51,6 +51,14 @@ class Comedy < ActiveRecord::Base
 
   def self.random(count = 5)
     order("RANDOM()").limit(count)
+  end
+
+  def self.without_image
+    includes(:image).where( images: { id: nil })
+  end
+
+  def self.without_video
+    includes(:video).where( videos: { id: nil })
   end
 
   def bilingual_title
