@@ -1,4 +1,4 @@
-<script type="text/javascript">
+// <script type="text/javascript">
 var _paq = _paq || [];
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
@@ -10,5 +10,5 @@ _paq.push(['enableLinkTracking']);
   g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 })();
 
-</script>
-<noscript><p><img src="http://piwik.blaznivekomedie.cz/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+// </script>
+// <noscript><p><img src="http://piwik.blaznivekomedie.cz/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
