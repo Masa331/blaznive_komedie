@@ -1,6 +1,10 @@
 module ApplicationHelper
-  def title(title)
-    content_for(:title) { "Bláznivé komedie | #{title}"}
+  def page_title(title = nil)
+    [ "Bláznivé komedie", title ].compact.join(' | ')
+  end
+
+  def merge_to_default_keywords(keywords = nil)
+    ([ 'komedie', 'zábava' ] << keywords.to_s).join(', ')
   end
 
   def markdown
