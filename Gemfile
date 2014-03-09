@@ -13,6 +13,7 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'exception_notification'
 
 gem 'metamagic'
+gem 'dynamic_sitemaps'
 
 # Authentication
 gem 'devise'

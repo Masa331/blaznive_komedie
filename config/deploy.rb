@@ -50,6 +50,21 @@ namespace :deploy do
     end
   end
 
+  task :prepare_sitemaps do
+    on roles(:app), in: :sequence, wait: 5 do |role|
+      execute :mkdir, '-p', "#{shared_path}/sitemaps"
+      execute :rm, '-rf', "#{release_path}/public/sitemaps"
+      execute :ln, '-s', "#{shared_path}/sitemaps #{release_path}/public/sitemaps"
+      # execute :rake, 'sitemap:generate'
+    end
+  end
+
+  after :publishing, :prepare_sitemaps
+
+  # every 1.day, at: "6am" do
+  #     rake "sitemap:generate"
+  # end
+
   # namespace :config do
   #   desc "Symlink s3 config."
   #   task :smtp_settings_symlink do

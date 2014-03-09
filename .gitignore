@@ -18,3 +18,4 @@ config/database.yml
 /tmp
 
 /public/system/images
+/public/system/sitemaps
