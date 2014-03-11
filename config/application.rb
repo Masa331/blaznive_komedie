@@ -20,6 +20,8 @@ module ImagineCms
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :cs
 
+    Paperclip.options[:command_path] = "/usr/bin/"
+
     config.to_prepare do
       Devise::SessionsController.layout 'administration'
       Devise::RegistrationsController.layout 'administration'
