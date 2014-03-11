@@ -51,15 +51,15 @@ namespace :deploy do
   end
 
   task :prepare_sitemaps do
-    on roles(:app), in: :sequence, wait: 5 do |role|
+    on roles(:app) do
       execute :mkdir, '-p', "#{shared_path}/sitemaps"
       execute :rm, '-rf', "#{release_path}/public/sitemaps"
       execute :ln, '-s', "#{shared_path}/sitemaps #{release_path}/public/sitemaps"
-      # execute :rake, 'sitemap:generate'
+      execute :rake, 'sitemap:generate'
     end
   end
 
-  after :publishing, :prepare_sitemaps
+  # after :publishing, :prepare_sitemaps
 
   # every 1.day, at: "6am" do
   #     rake "sitemap:generate"

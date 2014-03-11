@@ -15,8 +15,12 @@
 <div class="row panel">
   <div class="large-12 columns">
     <h1><%= @video.title %></h1>
-    Článek: <%= link_to @video.comedy.cz_title, admin_comedy_path(@video.comedy) %> |
+    <% if @video.comedy %>
+      Článek: <%= link_to @video.comedy.bilingual_title, admin_comedy_path(@video.comedy) %>
+    <% end %>
+    |
     <%= link_to 'Smazat video', admin_video_path(@video), method: :delete, class: 'red-text' %>
+
     <div>
       <%= video_iframe(@video) %>
     </div>
