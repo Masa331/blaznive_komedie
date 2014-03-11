@@ -51,6 +51,6 @@ class Admin::ImagesController < ApplicationController
   private
 
   def permitted_params
-    params.require(:image).permit(:title, :image)
+    params.require(:image).permit(:title, :image, :comedy_id)
   end
 end
