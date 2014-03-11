@@ -51,6 +51,6 @@ class Admin::VideosController < ApplicationController
   private
 
   def permitted_params
-    params.require(:video).permit(:title, link_attributes: [:href])
+    params.require(:video).permit(:title, :comedy_id, link_attributes: [:href])
   end
 end
