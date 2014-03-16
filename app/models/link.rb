@@ -10,5 +10,5 @@
 #
 
 class Link < ActiveRecord::Base
-  validates :href, presence: true
+  # validates :href, presence: true
 end
