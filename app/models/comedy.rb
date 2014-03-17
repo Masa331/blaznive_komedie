@@ -65,4 +65,8 @@ class Comedy < ActiveRecord::Base
     [ cz_title, en_title ].compact.join(' - ')
   end
 
+  def to_s
+    bilingual_title
+  end
+
 end

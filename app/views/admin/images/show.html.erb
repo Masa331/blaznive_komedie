@@ -3,7 +3,7 @@
     <h2>Upravit obrázek</h2>
     <%= semantic_form_for(@image, url: admin_image_path(@image), method: :patch) do |f| %>
       <%= f.input :title %>
-      <%= f.input :comedy, as: :select, collection: Hash[ Comedy.without_image.map{ |c| [ c.bilingual_title,c.id ] } ] %>
+      <%= f.input :comedy, as: :select, collection: Comedy.all %>
       <%= f.button :submit %>
     <% end %>
   </div>
