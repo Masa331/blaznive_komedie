@@ -37,6 +37,8 @@ class Comedy < ActiveRecord::Base
 
   scope :publicable, -> { where(publish: true) }
 
+  before_save :update_published_at, if: :publish_changed?
+
   def self.title_search(title)
     where(arel_table[:cz_title].matches("%#{title}%").or(arel_table[:en_title].matches("%#{title}%")))
   end
@@ -59,6 +61,12 @@ class Comedy < ActiveRecord::Base
 
   def to_s
     bilingual_title
+  end
+
+  private
+
+  def update_published_at
+    self.published_at = Time.zone.now
   end
 
 end
