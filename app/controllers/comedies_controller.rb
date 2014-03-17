@@ -9,7 +9,7 @@ class ComediesController < ApplicationController
   end
 
   def index
-    @comedies = Comedy.publicable.page(params[:page]).per(5)
+    @comedies = Comedy.publicable.order('published_at DESC').page(params[:page]).per(5)
   end
 
   def list
