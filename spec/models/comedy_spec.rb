@@ -65,24 +65,6 @@ describe Comedy do
     it "defaultly returns 5 random comedies"
   end
 
-  describe '.without_image' do
-    it 'returns comedies without image' do
-      comedy_with_image = create(:comedy, image: create(:image))
-      comedy = create(:comedy)
-
-      expect(Comedy.without_image).to eq [ comedy ]
-    end
-  end
-
-  describe '.without_video' do
-    it 'returns comedies without video' do
-      comedy_with_video = create(:comedy, video: create(:video))
-      comedy = create(:comedy)
-
-      expect(Comedy.without_video).to eq [ comedy ]
-    end
-  end
-
   describe "#bilingual_title" do
     it "returns string with both cz and en title concatenated by dash" do
       comedy = create(:comedy, cz_title: 'Cesky', en_title: 'Anglicky')

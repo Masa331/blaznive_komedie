@@ -53,14 +53,6 @@ class Comedy < ActiveRecord::Base
     order("RANDOM()").limit(count)
   end
 
-  def self.without_image
-    includes(:image).where( images: { id: nil })
-  end
-
-  def self.without_video
-    includes(:video).where( videos: { id: nil })
-  end
-
   def bilingual_title
     [ cz_title, en_title ].compact.join(' - ')
   end

@@ -3,7 +3,7 @@
     <h1>Nové video</h1>
     <%= semantic_form_for :video, url: admin_videos_path do |f| %>
       <%= f.input :title %>
-      <%= f.input :comedy, as: :select, collection: Hash[ Comedy.without_video.map{ |c| [ c.bilingual_title,c.id ] } ] %>
+      <%= f.input :comedy, as: :select, collection: Comedy.all %>
       <%= f.semantic_fields_for :link_attributes do |ff| %>
         <%= ff.input :href %>
       <% end %>
