@@ -52,7 +52,7 @@ a:hover {
 
 article {
   .head {
-    border-bottom: solid 1px $my_black;
+    border-bottom: solid 1px lightgrey;
     margin-bottom: 5px;
     .small {
       font-size: 0.9em;
@@ -83,6 +83,8 @@ article {
 }
 
 aside {
+
+  border-left: 1px dotted $my_purple;
   #search-form {
     width: 280px;
   }
