@@ -14,7 +14,11 @@
 #
 
 class Comedy < ActiveRecord::Base
+
   include FriendlyId
+
+  include Publicable
+
   friendly_id :bilingual_title, use: :slugged
 
   has_one :image
@@ -22,22 +26,12 @@ class Comedy < ActiveRecord::Base
 
   belongs_to :category
 
-  # validates :image,
-  #   presence: true
-
-  # validates :video,
-  #   presence: true
-
   validates :category,
     presence: true
 
   validates :text,
     presence: true,
     length: { minimum: 100 }
-
-  scope :publicable, -> { where(publish: true) }
-
-  before_save :update_published_at, if: :publish_changed?
 
   def self.title_search(title)
     where(arel_table[:cz_title].matches("%#{title}%").or(arel_table[:en_title].matches("%#{title}%")))
@@ -61,12 +55,6 @@ class Comedy < ActiveRecord::Base
 
   def to_s
     bilingual_title
-  end
-
-  private
-
-  def update_published_at
-    self.published_at = Time.zone.now
   end
 
 end

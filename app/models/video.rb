@@ -11,6 +11,9 @@
 #
 
 class Video < ActiveRecord::Base
+
+  include Publicable
+
   belongs_to :comedy
   has_one :link
 

@@ -12,6 +12,9 @@
 #
 
 class Post < ActiveRecord::Base
+
+  include Publicable
+
   validates :title,
     presence: true
   validates :text,

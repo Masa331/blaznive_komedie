@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140317131725) do
+ActiveRecord::Schema.define(version: 20140319185504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20140317131725) do
     t.datetime "image_updated_at"
     t.string   "alt"
     t.boolean  "publish"
+    t.datetime "published_at"
   end
 
   create_table "links", force: true do |t|
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20140317131725) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "preface"
+    t.datetime "published_at"
   end
 
   create_table "videos", force: true do |t|
@@ -89,6 +91,7 @@ ActiveRecord::Schema.define(version: 20140317131725) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "publish"
+    t.datetime "published_at"
   end
 
   create_table "wp_posts", id: false, force: true do |t|

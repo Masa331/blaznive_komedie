@@ -16,6 +16,9 @@
 #
 
 class Image < ActiveRecord::Base
+
+  include Publicable
+
   belongs_to :comedy
 
   validates :title, presence: true

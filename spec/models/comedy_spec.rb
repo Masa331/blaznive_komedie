@@ -1,17 +1,12 @@
 require 'spec_helper'
 
 describe Comedy do
-  # it { expect(subject).to have_one :video }
-  # it { expect(subject).to validate_presence_of :video }
 
-  # it { expect(subject).to have_one :image }
-  # it { expect(subject).to validate_presence_of :image }
+  it_behaves_like 'publicable'
 
   it { expect(subject).to validate_presence_of :text }
   it { expect(subject).to ensure_length_of(:text).is_at_least(100) }
-
   it { expect(subject).to validate_presence_of :category }
-
 
   describe '.publicable' do
     it "returns comedys which have publish = true" do

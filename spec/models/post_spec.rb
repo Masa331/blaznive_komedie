@@ -14,6 +14,9 @@
 require 'spec_helper'
 
 describe Post do
+
+  it_behaves_like 'publicable'
+
   it { expect(subject).to validate_presence_of :title }
   it { expect(subject).to validate_presence_of :text }
   it { expect(subject).to validate_presence_of :preface }

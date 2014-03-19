@@ -13,6 +13,9 @@
 require 'spec_helper'
 
 describe Video do
+
+  it_behaves_like 'publicable'
+
   it { expect(subject).to belong_to :comedy  }
   it { expect(subject).to have_one :link }
   it { expect(subject).to validate_presence_of :title }

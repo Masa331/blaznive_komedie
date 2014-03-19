@@ -18,6 +18,9 @@
 require 'spec_helper'
 
 describe Image do
+
+  it_behaves_like 'publicable'
+
   it { expect(subject).to validate_presence_of :title }
   it { expect(subject).to belong_to(:comedy) }
 

@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe 'visitor in comedies' do
 
-
   context 'on index' do
     it "does not see unpublished comedies on index" do
       comedy = create(:comedy, publish: false, cz_title: 'Slunce seno')
