@@ -33,9 +33,10 @@ describe 'visitor in comedies' do
     end
 
     it 'follows link to next and previous comedy' do
-      comedy = create(:comedy_with_image_and_video, cz_title: 'Slunce seno')
+      comedy = create(:comedy_with_image_and_video, cz_title: 'Slunce seno', en_title: 'Sun haystack')
       next_comedy = create(:comedy_with_image_and_video,
                            cz_title: 'Americká krása',
+                           en_title: 'American beauty',
                            text: 'ahoj'*50)
 
       visit comedy_path(comedy)
@@ -47,7 +48,7 @@ describe 'visitor in comedies' do
       expect(page).to have_content next_comedy.text
 
       within('.large-8') do
-        click_on 'Slunce seno →'
+        click_on 'Slunce seno - Sun haystack →'
       end
 
       expect(page).to have_content comedy.text

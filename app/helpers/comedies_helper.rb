@@ -1,6 +1,14 @@
 module ComediesHelper
   def comedy_meta(comedy)
-    "#{ l(comedy.published_at, format: :default) } | Zařazeno v kategorii #{ link_to(comedy.category.title, list_comedies_path(search: { category_search: comedy.category.id })) }".html_safe
+    [ comedy_stamp(comedy), comedy_comedy_link(comedy) ].compact.join(' | ').html_safe
+  end
+
+  def comedy_stamp(comedy)
+    l(comedy.created_at)
+  end
+
+  def comedy_comedy_link(comedy)
+    "Zařazeno v kategorii #{ link_to(comedy.category.title, list_comedies_path(search: { category_search: comedy.category.id })) }"
   end
 
   def next_comedy_link(comedy)

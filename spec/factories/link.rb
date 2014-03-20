@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :link do
-    href 'www.seznam.cz'
+    href 'http://www.youtube.com/embed/PZcokNrP9fQ'
   end
 end

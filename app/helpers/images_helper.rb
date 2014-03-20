@@ -4,6 +4,16 @@ module ImagesHelper
   end
 
   def image_meta(image)
-    "#{ l(image.created_at, format: :default) } | Zařazeno u: #{ link_to(image.comedy.bilingual_title, comedy_path(image.comedy)) }".html_safe
+    [ image_stamp(image), image_comedy_link(image) ].compact.join(' | ').html_safe
+  end
+
+  def image_stamp(image)
+    l(image.created_at)
+  end
+
+  def image_comedy_link(image)
+    if image.comedy
+      "Zařazeno u: #{ link_to(image.comedy.bilingual_title, comedy_path(image.comedy)) }"
+    end
   end
 end

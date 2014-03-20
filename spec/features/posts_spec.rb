@@ -1,15 +1,14 @@
 require 'spec_helper'
-describe 'visitor within posts' do
-  it 'shows posts index page' do
-    pending
-    comedy1 = create(:comedy)
-    comedy2 = create(:comedy)
-    unpublish_comedy = create(:comedy, publish: false)
-    visit comedys_path
 
-    expect(page).to have_link comedy1.title
-    expect(page).to have_link comedy2.title
-    expect(page).to have_link comedy2.title
-    expect(page).not_to have_content unpublish_comedy.title
+describe 'visitor within posts' do
+  it 'on index page' do
+    post1 = create(:post, publish: true, title: 'Viditelný článek')
+    post2 = create(:post, publish: false, title: 'Neviditelný článek')
+
+    visit root_path
+    click_on 'Články'
+
+    expect(page).to have_link post1.title
+    expect(page).to have_no_content post2.title
   end
 end
