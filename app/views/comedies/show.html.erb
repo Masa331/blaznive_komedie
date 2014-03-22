@@ -16,9 +16,11 @@
   <%= video_iframe(@comedy.video)  %>
 
 
-  <div class="comedy-tag_list">
-    Štítky: <%= comedies_tags_as_links(@comedy) %>
-  </div>
+  <% if @comedy.tags.any? %>
+    <div class="comedy-tag_list">
+      Štítky: <%= comedies_tags_as_links(@comedy) %>
+    </div>
+  <% end %>
 
   <hr />
 
