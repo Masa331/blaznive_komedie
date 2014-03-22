@@ -2,7 +2,7 @@
 #
 # Table name: wp_posts
 #
-#  id                    :integer          not null, primary key
+#  id                    :integer          not null
 #  post_author           :integer
 #  post_date             :datetime
 #  post_date_gmt         :datetime

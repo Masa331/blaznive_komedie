@@ -22,14 +22,27 @@ describe 'visitor in comedies' do
 
   context 'on show page' do
     it 'shows comedy page' do
-      comedy = create(:comedy_with_image_and_video, cz_title: 'Slunce seno', en_title: 'Sun haystack')
+      comedy = create(:comedy_with_image_and_video,
+                      cz_title: 'Slunce seno',
+                      en_title: 'Sun haystack',
+                      tag_list: [ 'Dejdar', 'Kaiser' ],
+                      category: create(:category,
+                                       title: 'České komedie'))
 
       visit comedies_path
 
       within('.large-8') do
         click_on 'Slunce seno - Sun haystack'
       end
-      expect(page).to have_content comedy.text
+
+      within('.large-8') do
+        expect(page).to have_content 'Slunce seno - Sun haystack'
+        expect(page).to have_content 'České komedie'
+        expect(page).to have_content 'Dejdar'
+        expect(page).to have_content 'Kaiser'
+        expect(page).to have_content comedy.text
+        # expect(page).to have_content comedy.published_at
+      end
     end
 
     it 'follows link to next and previous comedy' do

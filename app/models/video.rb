@@ -2,12 +2,13 @@
 #
 # Table name: videos
 #
-#  id         :integer          not null, primary key
-#  title      :string(255)
-#  comedy_id  :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  publish    :boolean
+#  id           :integer          not null, primary key
+#  title        :string(255)
+#  comedy_id    :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#  publish      :boolean
+#  published_at :datetime
 #
 
 class Video < ActiveRecord::Base

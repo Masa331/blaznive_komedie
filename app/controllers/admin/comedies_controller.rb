@@ -49,6 +49,6 @@ class Admin::ComediesController < ApplicationController
   private
 
   def permitted_params
-    params.require(:comedy).permit(:cz_title, :en_title, :text, :category_id, :publish)
+    params.require(:comedy).permit(:cz_title, :en_title, :text, :category_id, :publish, :tag_list)
   end
 end

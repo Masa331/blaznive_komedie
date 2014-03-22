@@ -13,6 +13,7 @@
 #  image_updated_at   :datetime
 #  alt                :string(255)
 #  publish            :boolean
+#  published_at       :datetime
 #
 
 class Image < ActiveRecord::Base

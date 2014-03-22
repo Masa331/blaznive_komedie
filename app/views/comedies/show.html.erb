@@ -1,4 +1,4 @@
-<% meta title: page_title(@comedy.bilingual_title) %>
+<% meta title: page_title(@comedy.bilingual_title), keywords: merge_to_default_keywords(@comedy.tag_list) %>
 
 <article>
   <div class="head">
@@ -14,6 +14,11 @@
 
   <h3>Trailer</h3>
   <%= video_iframe(@comedy.video)  %>
+
+
+  <div class="comedy-tag_list">
+    Štítky: <%= comedies_tags_as_links(@comedy) %>
+  </div>
 
   <hr />
 

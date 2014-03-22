@@ -14,6 +14,7 @@ gem 'exception_notification'
 
 gem 'metamagic'
 gem 'dynamic_sitemaps'
+gem 'acts-as-taggable-on'
 
 # Authentication
 gem 'devise'

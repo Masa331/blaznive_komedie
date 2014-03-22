@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def merge_to_default_keywords(keywords = nil)
-    ([ 'komedie', 'zábava' ] << keywords.to_s).join(', ')
+    ([ 'komedie', 'zábava' ] << keywords).join(', ')
   end
 
   def markdown

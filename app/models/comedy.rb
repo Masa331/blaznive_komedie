@@ -2,15 +2,16 @@
 #
 # Table name: comedies
 #
-#  id          :integer          not null, primary key
-#  cz_title    :string(255)
-#  text        :text
-#  publish     :boolean
-#  category_id :integer
-#  created_at  :datetime
-#  updated_at  :datetime
-#  en_title    :string(255)
-#  slug        :string(255)
+#  id           :integer          not null, primary key
+#  cz_title     :string(255)
+#  text         :text
+#  publish      :boolean
+#  category_id  :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#  en_title     :string(255)
+#  slug         :string(255)
+#  published_at :datetime
 #
 
 class Comedy < ActiveRecord::Base
@@ -20,6 +21,8 @@ class Comedy < ActiveRecord::Base
   include Publicable
 
   friendly_id :bilingual_title, use: :slugged
+
+  acts_as_taggable
 
   has_one :image
   has_one :video
