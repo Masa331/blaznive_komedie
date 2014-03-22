@@ -21,6 +21,6 @@ class ComediesController < ApplicationController
 
 
   def search_params
-    params.permit(search: [ :title_search, :category_search ]).fetch(:search, {})
+    params.permit(search: [ :title_search, :category_search, :tag_search ]).fetch(:search, {})
   end
 end
