@@ -1,0 +1,33 @@
+<div class="row panel">
+  <div class="large-12 columns">
+    <h2>Upravit link</h2>
+    <%= semantic_form_for(@link, url: admin_link_path(@link), method: :patch) do |f| %>
+      <%= f.input :uri %>
+      <%= f.input :linker, as: :select, collection: Video.all %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row panel">
+  <div class="large-12 columns">
+    <% if @link.linker %>
+      Video: <%= link_to @link.linker.title, admin_video_path(@link.linker) %> |
+    <% end %>
+
+    <div class="panel">
+      <%= @link.uri %>
+    </div>
+
+    <div>
+    <%= content_tag(:iframe, nil, { src: @link.uri,
+                                height: 281,
+                                width: 500,
+                                allowfullscreen: '',
+                                frameborder: 0 })
+     %>
+    </div>
+
+    <%= link_to 'Smazat obrázek', admin_link_path(@link), method: :delete, class: 'red-text' %>
+  </div>
+</div>

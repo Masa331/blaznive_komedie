@@ -4,9 +4,6 @@
 
     <%= semantic_form_for(@video, url: admin_video_path(@video), method: :patch) do |f| %>
       <%= f.input :comedy, as: :select, collection: Comedy.all %>
-      <%= f.semantic_fields_for :link_attributes do |ff| %>
-        <%= ff.input :uri, input_html: { value: @video.link.uri } %>
-      <% end %>
       <%= f.button :submit %>
     <% end %>
   </div>
@@ -21,8 +18,14 @@
     |
     <%= link_to 'Smazat video', admin_video_path(@video), method: :delete, class: 'red-text' %>
 
+    <% if @video.youtube_link %>
     <div>
+      <hr />
       <%= video_iframe(@video) %>
     </div>
+  <% elsif %>
+    <hr />
+    Neni link
+  <% end %>
   </div>
 </div>

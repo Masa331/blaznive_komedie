@@ -18,10 +18,10 @@ class Video < ActiveRecord::Base
   belongs_to :comedy
   has_one :youtube_link, as: :linker
 
-  accepts_nested_attributes_for :youtube_link
+  # accepts_nested_attributes_for :youtube_link
 
   validates :title, presence: true
-  validates :youtube_link, presence: true
+  # validates :youtube_link, presence: true
 
   scope :publicable, -> { where(publish: true) }
 end

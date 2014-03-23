@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="large-9 columns" role='content'>
+    <h1>Linky</h1>
+    <% @links.each do |link| %>
+    <ul><%= render 'link', link: link %></ul>
+  <% end %>
+  </div>
+</div>

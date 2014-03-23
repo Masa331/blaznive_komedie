@@ -5,6 +5,7 @@ ImagineCms::Application.routes.draw do
     resources :images
     resources :videos
     resources :posts
+    resources :links
   end
 
   resources :posts, only: [:index, :show]
