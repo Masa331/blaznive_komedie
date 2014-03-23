@@ -12,8 +12,6 @@
 #  linker_type :string(255)
 #
 
-require 'spec_helper'
+class YoutubeLink < Link
 
-describe Link do
-  it { expect(subject).to validate_presence_of :uri }
 end

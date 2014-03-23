@@ -5,7 +5,7 @@
       <%= f.input :title %>
       <%= f.input :comedy, as: :select, collection: Comedy.all %>
       <%= f.semantic_fields_for :link_attributes do |ff| %>
-        <%= ff.input :href %>
+        <%= ff.input :uri %>
       <% end %>
       <%= f.submit %>
     <% end %>

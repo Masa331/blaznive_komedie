@@ -18,9 +18,9 @@ describe Video do
   it_behaves_like 'publicable'
 
   it { expect(subject).to belong_to :comedy  }
-  it { expect(subject).to have_one :link }
+  it { expect(subject).to have_one :youtube_link }
   it { expect(subject).to validate_presence_of :title }
-  it { expect(subject).to validate_presence_of :link }
+  it { expect(subject).to validate_presence_of :youtube_link }
 
   describe '.publicable' do
     it "returns videos which have publish = true" do

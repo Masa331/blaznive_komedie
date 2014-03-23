@@ -12,7 +12,7 @@
 #  en_title     :string(255)
 #  slug         :string(255)
 #  published_at :datetime
-#
+
 
 class Comedy < ActiveRecord::Base
 
@@ -26,6 +26,8 @@ class Comedy < ActiveRecord::Base
 
   has_one :image
   has_one :video
+
+  has_one :catalog_link, as: :linker
 
   belongs_to :category
 

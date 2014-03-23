@@ -5,7 +5,7 @@
     <%= semantic_form_for(@video, url: admin_video_path(@video), method: :patch) do |f| %>
       <%= f.input :comedy, as: :select, collection: Comedy.all %>
       <%= f.semantic_fields_for :link_attributes do |ff| %>
-        <%= ff.input :href, input_html: { value: @video.link.href } %>
+        <%= ff.input :uri, input_html: { value: @video.link.uri } %>
       <% end %>
       <%= f.button :submit %>
     <% end %>

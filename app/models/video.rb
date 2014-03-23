@@ -16,12 +16,12 @@ class Video < ActiveRecord::Base
   include Publicable
 
   belongs_to :comedy
-  has_one :link
+  has_one :youtube_link, as: :linker
 
-  accepts_nested_attributes_for :link
+  accepts_nested_attributes_for :youtube_link
 
   validates :title, presence: true
-  validates :link, presence: true
+  validates :youtube_link, presence: true
 
   scope :publicable, -> { where(publish: true) }
 end
