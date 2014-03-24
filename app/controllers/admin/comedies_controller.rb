@@ -31,7 +31,12 @@ class Admin::ComediesController < ApplicationController
   def update
     @comedy = Comedy.friendly.find(params[:id])
     if @comedy.update_attributes(permitted_params)
-      redirect_to admin_comedies_path
+      next_link = Comedy.where(["id > ?", @comedy.id]).first
+      if next_link
+        redirect_to admin_comedy_path(next_link)
+      else
+        redirect_to admin_comedies_path
+      end
     else
       render :show
     end
