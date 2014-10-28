@@ -13,7 +13,6 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'dynamic_sitemaps'
 gem 'rails_admin'
 
-# Authentication
 gem 'devise'
 
 gem 'therubyracer'

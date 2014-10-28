@@ -1,3 +1,2 @@
 class YoutubeLink < Link
-
 end
