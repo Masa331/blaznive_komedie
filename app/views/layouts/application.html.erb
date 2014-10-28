@@ -7,7 +7,7 @@
     <title>Výběr z těch nejbláznivějších a nejzábavnějších komedií.</title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag %>
   </head>
@@ -21,6 +21,5 @@
       <%= render 'layouts/sidebar' %>
     </div>
     <%= render 'layouts/footer' %>
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
