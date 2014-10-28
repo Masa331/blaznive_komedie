@@ -11,7 +11,6 @@ ImagineCms::Application.routes.draw do
 
   devise_for :users
 
-  get "static_pages/contacts"
   root 'comedies#index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
