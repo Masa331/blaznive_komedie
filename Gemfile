@@ -10,7 +10,6 @@ gem 'paperclip'
 gem 'pg'
 gem 'rack-rewrite', '~> 1.2.1'
 gem 'friendly_id', '~> 5.0.0'
-gem 'exception_notification'
 
 gem 'metamagic'
 gem 'dynamic_sitemaps'
@@ -30,13 +29,10 @@ gem 'kaminari'
 
 
 group :development do
-  gem 'capistrano', '~> 3.1'
-  gem 'capistrano-rails', '~> 1.0.0'
+  gem 'capistrano',         '~> 3.2'
+  gem 'capistrano-rails',   '~> 1.0.0'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler', '~> 1.1.2'
-  # gem 'rack-mini-profiler'
-  # gem 'bullet'
-  # gem 'better_errors'
   gem 'binding_of_caller'
 end
 
@@ -45,15 +41,4 @@ group :test, :development do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
-  gem "rspec-rails"
-end
-
-group :test do
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
-  gem "factory_girl_rails"
-  gem 'database_cleaner'
-  gem 'simplecov', :require => false
-  gem 'delorean'
 end
