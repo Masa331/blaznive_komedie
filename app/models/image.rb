@@ -1,23 +1,4 @@
-# == Schema Information
-#
-# Table name: images
-#
-#  id                 :integer          not null, primary key
-#  title              :string(255)
-#  comedy_id          :integer
-#  created_at         :datetime
-#  updated_at         :datetime
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
-#  image_file_size    :integer
-#  image_updated_at   :datetime
-#  alt                :string(255)
-#  publish            :boolean
-#  published_at       :datetime
-#
-
 class Image < ActiveRecord::Base
-
   include Publicable
 
   belongs_to :comedy
@@ -29,6 +10,5 @@ class Image < ActiveRecord::Base
     content_type: { content_type: [ 'image/jpeg', 'image/png', 'image/gif' ] },
     size: { in: 0..1.megabytes}
 
-  scope :publicable, -> { where(publish: true) }
   scope :comedy_poster, -> { where.not(comedy_id: nil) }
 end
