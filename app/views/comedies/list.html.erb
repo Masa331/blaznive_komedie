@@ -1,5 +1,3 @@
-<% meta title: page_title('Seznam komedií') %>
-
 <div class="panel">
   <h3>Hledání</h3>
   <%= semantic_form_for :search, url: list_comedies_path, method: :get do |f| %>
@@ -20,7 +18,6 @@
   <div class='text-center sad-meme'><%= image_tag 'sad-face.png', width: 300 %></div>
   <p>Zkuste to prosím znovu s jinými parametry nebo se podívejte do <%= link_to 'seznamu komedií', list_comedies_path %>.</p>
 <% else %>
-  <%# <% paramsp[:search] nejsou %>
   <h3>Seznam komedií</h3>
   <div class="comedies-list">
     <ul>

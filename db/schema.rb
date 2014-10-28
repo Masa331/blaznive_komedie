@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022171010) do
+ActiveRecord::Schema.define(version: 20141028135422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,24 +69,6 @@ ActiveRecord::Schema.define(version: 20141022171010) do
     t.datetime "published_at"
   end
 
-  create_table "taggings", force: true do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.integer  "tagger_id"
-    t.string   "tagger_type"
-    t.string   "context",       limit: 128
-    t.datetime "created_at"
-  end
-
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
-
-  create_table "tags", force: true do |t|
-    t.string "name"
-  end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -112,32 +94,6 @@ ActiveRecord::Schema.define(version: 20141022171010) do
     t.datetime "updated_at"
     t.boolean  "publish"
     t.datetime "published_at"
-  end
-
-  create_table "wp_posts", id: false, force: true do |t|
-    t.integer  "id",                    limit: 8, null: false
-    t.integer  "post_author",           limit: 8
-    t.datetime "post_date"
-    t.datetime "post_date_gmt"
-    t.text     "post_content"
-    t.text     "post_title"
-    t.text     "post_excerpt"
-    t.text     "post_status"
-    t.text     "comment_status"
-    t.text     "ping_status"
-    t.text     "post_password"
-    t.text     "post_name"
-    t.text     "to_ping"
-    t.text     "pinged"
-    t.datetime "post_modified"
-    t.datetime "post_modified_gmt"
-    t.text     "post_content_filtered"
-    t.integer  "post_parent",           limit: 8
-    t.text     "guid"
-    t.integer  "menu_order"
-    t.text     "post_type"
-    t.text     "post_mime_type"
-    t.integer  "comment_count",         limit: 8
   end
 
 end

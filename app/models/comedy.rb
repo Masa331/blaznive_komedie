@@ -6,8 +6,6 @@ class Comedy < ActiveRecord::Base
 
   friendly_id :bilingual_title, use: :slugged
 
-  acts_as_taggable
-
   has_one :image
   has_one :video
 
@@ -37,7 +35,7 @@ class Comedy < ActiveRecord::Base
   end
 
   def bilingual_title
-    [ cz_title, en_title ].compact.join(' - ')
+    [ cz_title, en_title ].select(&:present?).join(' - ')
   end
 
   def to_s

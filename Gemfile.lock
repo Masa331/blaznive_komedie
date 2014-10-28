@@ -217,7 +217,6 @@ DEPENDENCIES
   capistrano-bundler (~> 1.1.2)
   capistrano-rails (~> 1.0.0)
   capistrano-rvm
-  coffee-rails (~> 4.0.0)
   devise
   dynamic_sitemaps
   formtastic

@@ -11,10 +11,6 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, {})
   end
 
-  def admin_area(&block)
-    yield if admin_signed_in?
-  end
-
   private
 
   def renderer
