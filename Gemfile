@@ -27,7 +27,6 @@ gem 'formtastic'
 gem 'redcarpet'
 gem 'kaminari'
 
-
 group :development do
   gem 'capistrano',         '~> 3.2'
   gem 'capistrano-rails',   '~> 1.0.0'
