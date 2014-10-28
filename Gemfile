@@ -15,6 +15,7 @@ gem 'exception_notification'
 gem 'metamagic'
 gem 'dynamic_sitemaps'
 gem 'acts-as-taggable-on'
+gem 'rails_admin'
 
 # Authentication
 gem 'devise'
@@ -33,9 +34,9 @@ group :development do
   gem 'capistrano-rails', '~> 1.0.0'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'rack-mini-profiler'
-  gem 'bullet'
-  gem 'better_errors'
+  # gem 'rack-mini-profiler'
+  # gem 'bullet'
+  # gem 'better_errors'
   gem 'binding_of_caller'
 end
 
@@ -45,7 +46,6 @@ group :test, :development do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem "rspec-rails"
-  gem "annotate"
 end
 
 group :test do

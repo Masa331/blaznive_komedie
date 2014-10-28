@@ -4,8 +4,10 @@
     <div class="small"><%= comedy_meta(comedy) %></div>
   </div>
 
-  <%= link_to comedy_path(comedy) do %>
-    <%= image_tag_with_options(comedy.image) %>
+  <% if comedy.image %>
+    <%= link_to comedy_path(comedy) do %>
+      <%= image_tag_with_options(comedy.image) %>
+    <% end %>
   <% end %>
 
   <p>

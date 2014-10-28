@@ -1,13 +1,4 @@
 ImagineCms::Application.routes.draw do
-  namespace :admin do
-    resources :comedies
-    resources :categories
-    resources :images
-    resources :videos
-    resources :posts
-    resources :links
-  end
-
   resources :posts, only: [:index, :show]
 
   resources :comedies do
@@ -18,8 +9,10 @@ ImagineCms::Application.routes.draw do
   resources :videos, only: :index
   resources :images, only: :index
 
-  devise_for :admins
+  devise_for :users
 
   get "static_pages/contacts"
   root 'comedies#index'
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

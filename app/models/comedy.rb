@@ -1,19 +1,3 @@
-# == Schema Information
-#
-# Table name: comedies
-#
-#  id           :integer          not null, primary key
-#  cz_title     :string(255)
-#  text         :text
-#  publish      :boolean
-#  category_id  :integer
-#  created_at   :datetime
-#  updated_at   :datetime
-#  en_title     :string(255)
-#  slug         :string(255)
-#  published_at :datetime
-
-
 class Comedy < ActiveRecord::Base
 
   include FriendlyId
@@ -26,8 +10,6 @@ class Comedy < ActiveRecord::Base
 
   has_one :image
   has_one :video
-
-  has_one :catalog_link, as: :linker
 
   belongs_to :category
 
@@ -61,5 +43,4 @@ class Comedy < ActiveRecord::Base
   def to_s
     bilingual_title
   end
-
 end

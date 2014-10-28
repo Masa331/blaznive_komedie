@@ -6,14 +6,18 @@
     <div class="small"><%= comedy_meta(@comedy) %></div>
   </div>
 
-  <%= link_to comedy_path(@comedy) do %>
-    <%= image_tag_with_options(@comedy.image) %>
+  <% if @comedy.image %>
+    <%= link_to comedy_path(@comedy) do %>
+      <%= image_tag_with_options(@comedy.image) %>
+    <% end %>
   <% end %>
 
   <p><%= raw markdown.render(@comedy.text) %></p>
 
   <h3>Trailer</h3>
-  <%= video_iframe(@comedy.video)  %>
+  <% if @comedy.video %>
+    <%= video_iframe(@comedy.video)  %>
+  <% end %>
 
 
   <% if @comedy.tags.any? %>
