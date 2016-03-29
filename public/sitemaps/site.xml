@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://www.blaznivekomedie.cz/</loc>
+<lastmod>2014-03-09T15:09:46+00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://www.blaznivekomedie.cz/comedies</loc>
+</url>
+<url>
+<loc>http://www.blaznivekomedie.cz/videos</loc>
+</url>
+<url>
+<loc>http://www.blaznivekomedie.cz/images</loc>
+</url>
+<url>
+<loc>http://www.blaznivekomedie.cz/posts</loc>
+</url>
+</urlset>

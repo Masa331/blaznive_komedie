@@ -1,0 +1,18 @@
+<article>
+  <div class="head">
+    <h2><%= link_to comedy.bilingual_title, comedy_path(comedy) %></h2>
+    <div class="small"><%= comedy_meta(comedy) %></div>
+  </div>
+
+  <% if comedy.image %>
+    <%= link_to comedy_path(comedy) do %>
+      <%= image_tag_with_options(comedy.image) %>
+    <% end %>
+  <% end %>
+
+  <p>
+    <%= truncate(comedy.text, length: 200) do %>
+      <%= link_to 'Číst dále a podívat se na trailer... »', comedy_path(comedy) %>
+    <% end %>
+  </p>
+</article>

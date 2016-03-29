@@ -1,0 +1,73 @@
+cs:
+  activerecord:
+    attributes:
+      admin:
+        email: 'E-mail'
+        password: 'Heslo'
+      comedy:
+        title: 'Název'
+        text: 'Text'
+        category: 'Kategorie'
+        publish: 'Zveřejnit komedii'
+      image:
+        title: 'Název obrázku'
+        image: 'Obrázek'
+      video:
+        title: 'Název videa'
+      link:
+        title: 'Název linku'
+        href: 'Link'
+
+  helpers:
+    submit:
+      admin:
+        create: 'Přihlásit'
+      comedy:
+        create: 'Přidat komedii'
+        update: 'Upravit komedii'
+      category:
+        submit: 'Vytvořit kategorii'
+        update: 'Upravit kategorii'
+      image:
+        submit: 'Vytvořit obrázek'
+        update: 'Upravit obrázek'
+      video:
+        submit: 'Vytvořit video'
+        update: 'Upravit video'
+      search:
+        submit: 'Hledat'
+
+  devise:
+    failure:
+      admin:
+        not_found_in_database: 'Neplatné přihlašovacví údaje'
+
+  formtastic:
+    actions:
+      search_submit: 'Hledat'
+
+  simple_form:
+    labels:
+      category:
+        title: 'Název'
+      image:
+        title: 'Název'
+        image: 'Obrázek'
+      video:
+        title: 'Název'
+      link:
+        title: 'Název'
+        href: 'Link'
+    placeholders:
+      comedy:
+        title: 'Zadejte název komedie'
+      search:
+        title_search: 'Český nebo anglický název komedie'
+
+  views:
+    pagination:
+      first: "&laquo; První"
+      last: "Poslední &raquo;"
+      previous: "&lsaquo; Předchozí"
+      next: "Další &rsaquo;"
+      truncate: "..."

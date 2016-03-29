@@ -1,0 +1,250 @@
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:21)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:21)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:23)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:24)
+DEPRECATION WARNING: append_before_filter is deprecated and will be removed in Rails 5.1. Use append_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:24)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:20)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:21)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:21)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:23)
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:24)
+DEPRECATION WARNING: append_before_filter is deprecated and will be removed in Rails 5.1. Use append_before_action instead. (called from block in <class:Application> at /home/masa331/pracovni/apps/blaznive_komedie/config/application.rb:24)
+Started GET "/" for 127.0.0.1 at 2016-03-29 21:28:57 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.beta3) lib/active_record/migration.rb:578:in `check_pending!'
+activerecord (5.0.0.beta3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (5.0.0.beta3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.beta3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.beta3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/reloader.rb:71:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.beta3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.beta3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.beta3) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.beta3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.beta3) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.beta3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.0.alpha) lib/rack/method_override.rb:22:in `call'
+rack (2.0.0.alpha) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.beta3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/load_interlock.rb:13:in `call'
+actionpack (5.0.0.beta3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.0.alpha) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.beta3) lib/rails/engine.rb:522:in `call'
+puma (3.2.0) lib/puma/configuration.rb:227:in `call'
+puma (3.2.0) lib/puma/server.rb:561:in `handle_request'
+puma (3.2.0) lib/puma/server.rb:406:in `process_client'
+puma (3.2.0) lib/puma/server.rb:271:in `block in run'
+puma (3.2.0) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (60.1ms)
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "comedies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cz_title" varchar, "text" text, "publish" boolean, "category_id" integer, "created_at" datetime, "updated_at" datetime, "en_title" varchar, "slug" varchar, "published_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_comedies_on_slug" ON "comedies" ("slug")[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "alt" varchar, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "type" varchar, "uri" varchar, "linker_id" integer, "linker_type" varchar) [0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "title" varchar, "publish" boolean, "created_at" datetime, "updated_at" datetime, "preface" text, "published_at" datetime) [0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (20.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar PRIMARY KEY) [0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (13.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20141028135422')[0m
+  [1m[35m (13.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20140126094033'), ('20140126182428'), ('20140322225937'), ('20140322213422'), ('20140322214703'), ('20140125115658'), ('20140317131725'), ('20140319185504'), ('20140322230847'), ('20140322152632'), ('20140322181514'), ('20140112133725'), ('20140131135239'), ('20140322230200'), ('20140212161645'), ('20140112125153'), ('20140115104917'), ('20140126092103'), ('20140322152633'), ('20141022171010'), ('20140112124947'), ('20140209103517'), ('20140123203648'), ('20140129082608'), ('20140112125047'), ('20140112175557'), ('20140301171811'), ('20141022170448')[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-03-29 19:29:24 UTC], ["updated_at", 2016-03-29 19:29:24 UTC]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "comedies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cz_title" varchar, "text" text, "publish" boolean, "category_id" integer, "created_at" datetime, "updated_at" datetime, "en_title" varchar, "slug" varchar, "published_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_comedies_on_slug" ON "comedies" ("slug")[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "alt" varchar, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "type" varchar, "uri" varchar, "linker_id" integer, "linker_type" varchar) [0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "title" varchar, "publish" boolean, "created_at" datetime, "updated_at" datetime, "preface" text, "published_at" datetime) [0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar PRIMARY KEY) [0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20141028135422')[0m
+  [1m[35m (7.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20140126094033'), ('20140126182428'), ('20140322225937'), ('20140322213422'), ('20140322214703'), ('20140125115658'), ('20140317131725'), ('20140319185504'), ('20140322230847'), ('20140322152632'), ('20140322181514'), ('20140112133725'), ('20140131135239'), ('20140322230200'), ('20140212161645'), ('20140112125153'), ('20140115104917'), ('20140126092103'), ('20140322152633'), ('20141022171010'), ('20140112124947'), ('20140209103517'), ('20140123203648'), ('20140129082608'), ('20140112125047'), ('20140112175557'), ('20140301171811'), ('20141022170448')[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-03-29 19:29:25 UTC], ["updated_at", 2016-03-29 19:29:25 UTC]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (11.9ms)[0m  [1m[35mDROP TABLE "categories"[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.2ms)[0m  [1m[35mDROP TABLE "comedies"[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "comedies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cz_title" varchar, "text" text, "publish" boolean, "category_id" integer, "created_at" datetime, "updated_at" datetime, "en_title" varchar, "slug" varchar, "published_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_comedies_on_slug" ON "comedies" ("slug")[0m
+  [1m[35m (7.9ms)[0m  [1m[35mDROP TABLE "images"[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "alt" varchar, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (8.1ms)[0m  [1m[35mDROP TABLE "links"[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "type" varchar, "uri" varchar, "linker_id" integer, "linker_type" varchar) [0m
+  [1m[35m (8.8ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "title" varchar, "publish" boolean, "created_at" datetime, "updated_at" datetime, "preface" text, "published_at" datetime) [0m
+  [1m[35m (13.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (16.9ms)[0m  [1m[35mDROP TABLE "videos"[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (19.5ms)[0m  [1m[35mDROP TABLE "categories"[0m
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (19.7ms)[0m  [1m[35mDROP TABLE "comedies"[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "comedies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cz_title" varchar, "text" text, "publish" boolean, "category_id" integer, "created_at" datetime, "updated_at" datetime, "en_title" varchar, "slug" varchar, "published_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_comedies_on_slug" ON "comedies" ("slug")[0m
+  [1m[35m (18.3ms)[0m  [1m[35mDROP TABLE "images"[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "alt" varchar, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (16.4ms)[0m  [1m[35mDROP TABLE "links"[0m
+  [1m[35m (20.7ms)[0m  [1m[35mCREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "type" varchar, "uri" varchar, "linker_id" integer, "linker_type" varchar) [0m
+  [1m[35m (20.7ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "title" varchar, "publish" boolean, "created_at" datetime, "updated_at" datetime, "preface" text, "published_at" datetime) [0m
+  [1m[35m (24.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE "videos"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "comedy_id" integer, "created_at" datetime, "updated_at" datetime, "publish" boolean, "published_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2016-03-29 21:31:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComediesController#index as HTML
+  [1m[36mComedy Load (0.5ms)[0m  [1m[34mSELECT  "comedies".* FROM "comedies" WHERE "comedies"."publish" = ? ORDER BY "comedies"."published_at" DESC LIMIT ? OFFSET ?[0m  [["publish", true], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comedies" WHERE "comedies"."publish" = ?[0m  [["publish", true]]
+  Rendered comedies/index.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 445ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /home/masa331/.rvm/gems/ruby-2.3.0/gems/babel-source-5.8.35/lib
+  /home/masa331/pracovni/apps/blaznive_komedie/app/assets/images
+  /home/masa331/pracovni/apps/blaznive_komedie/app/assets/javascripts
+  /home/masa331/pracovni/apps/blaznive_komedie/app/assets/stylesheets
+  /home/masa331/pracovni/apps/blaznive_komedie/vendor/assets/javascripts
+  /home/masa331/pracovni/apps/blaznive_komedie/vendor/assets/stylesheets
+  /home/masa331/.rvm/gems/ruby-2.3.0/gems/formtastic-3.1.4/app/assets/stylesheets
+  /home/masa331/.rvm/gems/ruby-2.3.0/gems/foundation-rails-6.2.0.1/vendor/assets/js
+  /home/masa331/.rvm/gems/ruby-2.3.0/gems/foundation-rails-6.2.0.1/vendor/assets/scss
+  /home/masa331/.rvm/gems/ruby-2.3.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /home/masa331/.rvm/gems/ruby-2.3.0/gems/actioncable-5.0.0.beta3/lib/assets/compiled):
+     6:     <meta name='description' content='Pravidelně aktualizovaný seznam českých o zahraničních komedií.'>
+     7:     <title>Výběr z těch nejbláznivějších a nejzábavnějších komedií.</title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:     <%= csrf_meta_tags %>
+    12:     <%= favicon_link_tag %>
+  
+app/assets/stylesheets/foundation_and_overrides.scss:9
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1437051257657003400_69868179482360'
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.beta3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (25.2ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/masa331/.rvm/gems/ruby-2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (34.4ms)

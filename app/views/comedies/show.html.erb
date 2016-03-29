@@ -1,0 +1,26 @@
+<article>
+  <div class="head">
+    <h2><%= @comedy.bilingual_title %></h2>
+    <div class="small"><%= comedy_meta(@comedy) %></div>
+  </div>
+
+  <% if @comedy.image %>
+    <%= link_to comedy_path(@comedy) do %>
+      <%= image_tag_with_options(@comedy.image) %>
+    <% end %>
+  <% end %>
+
+  <p><%= raw markdown.render(@comedy.text) %></p>
+
+  <h3>Trailer</h3>
+  <% if @comedy.video %>
+    <%= video_iframe(@comedy.video)  %>
+  <% end %>
+
+  <hr />
+
+  <div class="next-previous">
+    <%= next_comedy_link(@next_comedy) if @next_comedy %>
+    <%= previous_comedy_link(@previous_comedy) if @previous_comedy%>
+  </div>
+</article>

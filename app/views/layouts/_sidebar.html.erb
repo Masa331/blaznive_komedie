@@ -1,0 +1,11 @@
+<aside class="large-4 columns">
+  <h5>Náhodné komedie</h5>
+  <ul class='no-margin'>
+    <% @random_comedies.each do |comedy| %>
+      <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+    <% end %>
+  </ul>
+
+  <h5>Doporučujeme</h5>
+  <%= link_to 'Trikobraní', 'http://www.trikobrani.cz' %>
+</aside>

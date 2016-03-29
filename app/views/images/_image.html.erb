@@ -1,0 +1,10 @@
+<article>
+  <div class="head">
+    <h2><%= image.comedy.bilingual_title %></h2>
+    <div class="small"><%= image_meta(image) %></div>
+  </div>
+
+  <%= link_to comedy_path(image.comedy) do %>
+    <%= image_tag_with_options(image) %>
+  <% end %>
+</article>
