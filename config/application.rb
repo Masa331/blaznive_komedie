@@ -13,15 +13,6 @@ module ImagineCms
 
     ActiveSupport.halt_callback_chains_on_return_false = false
 
-    Paperclip.options[:command_path] = "/usr/bin/"
-
     config.assets.initialize_on_precompile = false
-    # config.to_prepare do
-    #   Devise::SessionsController.layout 'administration'
-    #   Devise::RegistrationsController.layout 'administration'
-    #   Devise::ConfirmationsController.layout 'administration'
-    #   Devise::UnlocksController.layout 'administration'
-    #   Devise::PasswordsController.layout 'administration'
-    # end
   end
 end

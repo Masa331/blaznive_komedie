@@ -6,21 +6,13 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'sass-rails'
 gem 'jquery-rails'
-gem 'paperclip'
 
 gem 'sqlite3'
-gem 'rack-rewrite'
 gem 'friendly_id'
 
-gem 'dynamic_sitemaps'
-# gem 'rails_admin'
-
-# gem 'devise'
-
-gem 'foundation-rails'
 gem 'formtastic'
 gem 'redcarpet'
-gem 'kaminari'
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 
 group :development do
   gem 'capistrano'
@@ -36,5 +28,4 @@ group :test, :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'factory_girl'
 end

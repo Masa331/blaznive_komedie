@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <meta charset="utf-8" />
-
-    <meta name='description' content='Pravidelně aktualizovaný seznam českých o zahraničních komedií.'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='description' content='Pravidelně aktualizovaný seznam českých a zahraničních komedií.'>
     <title>Výběr z těch nejbláznivějších a nejzábavnějších komedií.</title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag %>
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <div class="row">
-      <div class="large-8 columns" role='content'>
-        <%= yield %>
-      </div>
+    <div id="page">
+      <%= yield %>
+
       <%= render 'layouts/sidebar' %>
+
+      <%= render 'layouts/footer' %>
     </div>
-    <%= render 'layouts/footer' %>
   </body>
 </html>

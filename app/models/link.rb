@@ -1,5 +1,4 @@
 class Link < ApplicationRecord
-
   validates :uri, presence: true
 
   def o_uri
