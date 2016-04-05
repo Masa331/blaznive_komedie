@@ -1,29 +1,12 @@
-<div class="panel">
-  <h3>Hledání</h3>
-  <%= semantic_form_for :search, url: list_comedies_path, method: :get do |f| %>
-    <%= f.inputs do %>
-      <%= f.input :title_search, label: false, placeholder: 'Zadejte český nebo anglický název' %>
-      <h4>Kategorie</h4>
-      <%= f.input :category_search,label: false, collection: categories_for_select, as: :radio %>
-    <% end %>
-
-    <%= f.actions do %>
-      <%= f.action :submit, as: :button, button_html: { class: 'button' }, label: :search_submit %>
-    <% end %>
-  <% end %>
-</div>
-
-<% if @comedies.blank? %>
-  <h3>Bohužel pro Vaše hledání "<%= params[:search][:title_search] %>" jsme nenalezli žádné výsledky</h3>
-  <div class='text-center sad-meme'><%= image_tag 'sad-face.png', width: 300 %></div>
-  <p>Zkuste to prosím znovu s jinými parametry nebo se podívejte do <%= link_to 'seznamu komedií', list_comedies_path %>.</p>
-<% else %>
-  <h3>Seznam komedií</h3>
-  <div class="comedies-list">
-    <ul>
-      <% @comedies.each do |comedy| %>
-        <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
-      <% end %>
-    </ul>
+<div id="content" class="narrowcolumn">
+  <div>
+    <h3>Abecední seznam komedií</h3>
+    <div class="comedies-list">
+      <ul>
+        <% @comedies.each do |comedy| %>
+          <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-<% end %>
+</div>

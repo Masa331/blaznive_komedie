@@ -1,5 +1,6 @@
-ImagineCms::Application.routes.draw do
-  resources :posts, only: [:index, :show]
+Rails.application.routes.draw do
+  get '*x/*x', to: 'static_pages#under_construction'
+  root 'static_pages#under_construction'
 
   resources :comedies do
     collection do
@@ -9,9 +10,5 @@ ImagineCms::Application.routes.draw do
   resources :videos, only: :index
   resources :images, only: :index
 
-  devise_for :users
-
   root 'comedies#index'
-
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

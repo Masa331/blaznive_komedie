@@ -1,18 +1,10 @@
-class Comedy < ActiveRecord::Base
-
+class Comedy < ApplicationRecord
   include FriendlyId
-
-  include Publicable
 
   friendly_id :bilingual_title, use: :slugged
 
   has_one :image
   has_one :video
-
-  belongs_to :category
-
-  validates :category,
-    presence: true
 
   validates :text,
     presence: true,

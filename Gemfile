@@ -1,39 +1,31 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
-gem 'sass-rails', '~> 4.0.0'
+gem 'rails', '>= 5.0.0.beta3', '< 5.1'
+gem 'puma'
 gem 'uglifier', '>= 1.3.0'
+
+gem 'sass-rails'
 gem 'jquery-rails'
-gem 'paperclip'
 
-gem 'pg'
-gem 'rack-rewrite', '~> 1.2.1'
-gem 'friendly_id', '~> 5.0.0'
+gem 'sqlite3'
+gem 'friendly_id'
 
-gem 'dynamic_sitemaps'
-gem 'rails_admin'
-
-gem 'devise'
-
-gem 'therubyracer'
-
-# Views
-gem 'foundation-rails'
 gem 'formtastic'
 gem 'redcarpet'
-gem 'kaminari'
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 
 group :development do
-  gem 'capistrano',         '~> 3.2'
-  gem 'capistrano-rails',   '~> 1.0.0'
+  gem 'capistrano'
+  gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'binding_of_caller'
+  gem 'capistrano-bundler'
+
+  gem 'web-console', '~> 3.0'
+  gem 'listen', '~> 3.0.5'
 end
 
 group :test, :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'pry-stack_explorer'
 end

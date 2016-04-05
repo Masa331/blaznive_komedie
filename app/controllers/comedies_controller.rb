@@ -6,18 +6,10 @@ class ComediesController < ApplicationController
   end
 
   def index
-    @comedies = Comedy.publicable.order(published_at: :desc).page(params[:page]).per(5)
+    @comedies = Comedy.order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def list
-    @search   = Search::Comedy.new(search_params)
-    @comedies = @search.result.publicable.order(:cz_title)
-  end
-
-  private
-
-
-  def search_params
-    params.permit(search: [:title_search, :category_search]).fetch(:search, {})
+    @comedies = Comedy.order(:cz_title)
   end
 end

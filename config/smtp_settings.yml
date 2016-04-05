@@ -1,7 +1,1 @@
-address: "smtp.gmail.com"
-domain: "gmail.com"
-user_name: ""
-password: ""
-port: 587
-authentication: 'plain'
-enable_starttls_auto: true
+/var/www/blaznive_komedie/shared/config/smtp_settings.yml
