@@ -1,5 +1,3 @@
-lock '3.2.1'
-
 set :application, 'blaznive_komedie'
 set :repo_url,    'git@bitbucket.org:masa331/blaznive_komedie.git'
 set :deploy_to,   '/var/www/blaznive_komedie'

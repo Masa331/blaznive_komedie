@@ -14,7 +14,7 @@
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '46.28.108.94', user: 'deploy', roles: %w{web app db}
+server '52.58.37.207', user: 'ubuntu', roles: %w{web app db}
 # server '46.28.108.94', user: 'deploy', roles: %w{web app db}, my_property: :my_value
 
 # you can set custom ssh options
