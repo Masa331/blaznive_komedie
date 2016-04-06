@@ -15,6 +15,9 @@
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 server '52.58.37.207', user: 'ubuntu', roles: %w{web app db}
+set :ssh_options, {
+ keys: %w(/home/masa331/.ssh/aws2.pem)
+}
 # server '46.28.108.94', user: 'deploy', roles: %w{web app db}, my_property: :my_value
 
 # you can set custom ssh options
