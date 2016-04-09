@@ -8,9 +8,9 @@
   </small>
 
   <div class="entry">
-    <% if comedy.image.image_file_name.present? %>
+    <% if comedy.image.image_url.present? %>
       <%= link_to comedy_path(comedy) do %>
-        <%= image_tag "comedy_posters/#{comedy.image.image_file_name}" %>
+        <%= image_tag comedy.image.image_url %>
       <% end %>
     <% end %>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403185327) do
+ActiveRecord::Schema.define(version: 20160409105157) do
 
   create_table "comedies", force: :cascade do |t|
     t.string   "cz_title"
@@ -29,10 +29,7 @@ ActiveRecord::Schema.define(version: 20160403185327) do
     t.integer  "comedy_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string   "image_url"
     t.string   "alt"
   end
 
