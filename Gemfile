@@ -4,6 +4,9 @@ gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 gem 'puma'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'execjs'
+gem 'therubyracer'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 

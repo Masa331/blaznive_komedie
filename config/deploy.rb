@@ -4,7 +4,7 @@ set :deploy_to,   '/var/www/blaznive_komedie'
 set :pty, true
 set :linked_files, %w{config/database.yml config/smtp_settings.yml config/secrets.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-set :default_env, { path: "/opt/ruby/bin:$PATH" }
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :rails_env, 'production'
 set :stage,     :production
 
