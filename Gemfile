@@ -20,8 +20,8 @@ gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'ma
 group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
-  gem 'capistrano-rvm'
   gem 'capistrano-bundler'
+  gem 'capistrano3-puma'
 
   gem 'web-console', '~> 3.0'
   gem 'listen', '~> 3.0.5'
