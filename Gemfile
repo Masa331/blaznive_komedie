@@ -16,6 +16,7 @@ gem 'friendly_id'
 gem 'formtastic'
 gem 'redcarpet'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+gem 'aws-sdk', '~> 2.0'
 
 group :development do
   gem 'capistrano'
