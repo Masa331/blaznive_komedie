@@ -9,7 +9,7 @@
 
   <div class="entry">
     <%= link_to comedy_path(image.comedy) do %>
-      <%= image_tag("comedy_posters/#{image.image_file_name}") %>
+      <%= image_tag(image.image_url) %>
     <% end %>
   </div>
 </div>
