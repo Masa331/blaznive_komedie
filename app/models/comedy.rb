@@ -3,8 +3,10 @@ class Comedy < ApplicationRecord
 
   friendly_id :bilingual_title, use: :slugged
 
-  has_one :image
-  has_one :video
+  has_one :image,
+    dependent: :destroy
+  has_one :video,
+    dependent: :destroy
 
   validates :text,
     presence: true,
