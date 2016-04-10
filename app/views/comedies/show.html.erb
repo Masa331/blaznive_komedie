@@ -24,9 +24,14 @@
 
       <hr />
 
-      <div class="next-previous">
-        <%= next_comedy_link(@next_comedy) if @next_comedy %>
-        <%= previous_comedy_link(@previous_comedy) if @previous_comedy %>
+      <div>
+        <% if @next_comedy %>
+          <%= link_to(" ←   #{@next_comedy.bilingual_title}", comedy_path(@next_comedy), class: 'alignleft') %>
+        <% end %>
+
+        <% if @previous_comedy %>
+          <%= link_to(" #{@previous_comedy.bilingual_title} → ", comedy_path(@previous_comedy), class: 'alignright') %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 class Link < ApplicationRecord
-  validates :uri, presence: true
+  validates :uri,
+    presence: true
 
   def o_uri
     URI(read_attribute(:uri) || 'ahoj' )

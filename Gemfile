@@ -13,7 +13,6 @@ gem 'jquery-rails'
 gem 'sqlite3'
 gem 'friendly_id'
 
-gem 'formtastic'
 gem 'redcarpet'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 gem 'aws-sdk', '~> 2.0'

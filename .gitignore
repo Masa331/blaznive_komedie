@@ -25,3 +25,4 @@
 /config/secrets.yml
 /config/database.yml
 /config/cable.yml
+/config/initializers/secret_token.rb
