@@ -1,0 +1,18 @@
+namespace :sqlite do
+  desc 'Backup production database into /tmp'
+
+  task :backup_db do
+    on roles(:db) do |host|
+      download! '/var/www/blaznive_komedie/shared/db/production.sqlite3', '/tmp/blaznive_komedie_backup.sqlite3'
+    end
+  end
+
+  desc 'Upload local development database into production. Production database is backuped before this.'
+
+  task :upload_db do
+    on roles(:db) do |host|
+      upload! 'db/development.sqlite3', '/var/www/blaznive_komedie/shared/db/production.sqlite3'
+    end
+  end
+  before :upload_db, :backup_db
+end
