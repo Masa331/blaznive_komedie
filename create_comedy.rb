@@ -5,16 +5,16 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Karlík a továrna na čokoládu'
-en_title = 'Charlie and the Chocolate Factory'
-text = 'Charlie Bucket je malý chlapec, pochádzajúci z celkom zbedačenej rodiny, býva na okraji mesta hneď vedľa obrovskej továrne na čokoládu. Charlie miluje čokoládu, aj keď dostáva čokoládový bombón len raz do roka. Jedného dňa však vyhrá aj s ďalšími štyrmi deťmi cestu po fantastickej čokoládovej továrni, ktorú vlastní excentrický Willy Wonka a jeho nemenej zaujímaví zamestnanci.**(oficiální text distributora)**'
+cz_title = 'Marmaduk'
+en_title = 'Marmaduke'
+text = 'Devadesáti kilový pes marmaduk se spolue se svojí rodinou přestěhuje z amerického středozápadu do slunné Orange County. Obrovský pes má kvůli své velikosti zezačátku potíže najít si přátele a partnerku ale se vším mu naštěstí pomáhá nevlastní bratr Carlos a ruská modrá kočka. Bláznivá rodinná komedie plná mluvících zvířat.'
 
-video_title = 'Karlík a továrna na čokoládu'
-video_link = 'http://www.youtube.com/embed/84srLOhooN8'
+video_title = 'Marmaduke'
+video_link = 'https://www.youtube.com/embed/xGx6IhjoWqw'
 
-image_title = 'Karlík a továrna na čokoládu'
-image_aws_title = 'charlie_and_chocolate_factory'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/charlie_and_chocolate_factory.jpg'
+image_title = 'Marmaduke'
+image_aws_title = 'marmaduke'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/marmaduke.jpg'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
