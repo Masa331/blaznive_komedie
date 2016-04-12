@@ -7,7 +7,9 @@
     <title>Výběr z těch nejbláznivějších a nejzábavnějších komedií.</title>
 
     <%= stylesheet_link_tag    'application' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- Switching off turbolink because of Google Analytics. -->
+    <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag %>
   </head>
