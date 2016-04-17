@@ -16,6 +16,8 @@ gem 'friendly_id'
 gem 'redcarpet'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 gem 'aws-sdk', '~> 2.0'
+# Gem in rubygems not yet compatible with Rails 5
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 
 group :development do
   gem 'capistrano'

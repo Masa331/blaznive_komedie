@@ -2,6 +2,7 @@ class Comedy < ApplicationRecord
   include FriendlyId
 
   friendly_id :bilingual_title, use: :slugged
+  acts_as_taggable
 
   has_one :image,
     dependent: :destroy

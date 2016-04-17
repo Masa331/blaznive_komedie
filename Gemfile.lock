@@ -7,6 +7,13 @@ GIT
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
 
+GIT
+  remote: git://github.com/mbleigh/acts-as-taggable-on.git
+  revision: dde41a4d0d14e0f5b57c685265f68545383f70fa
+  specs:
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -222,6 +229,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on!
   aws-sdk (~> 2.0)
   capistrano
   capistrano-bundler
