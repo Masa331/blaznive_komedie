@@ -1,34 +1,22 @@
-<div id="sidebar">
-  <div id="header">
+<div id="sidebar" class='hidden-sm-down'>
+  <div id="logo">
     <%= link_to root_path do %>
-      <%= image_tag 'logo2.png' %>
+      <%= image_tag 'logo2.png', class: 'img-fluid' %>
     <% end %>
   </div>
 
-  <ul>
-    <li>
-      <!-- <form role="search" method="get" id="searchform" class="searchform" action="http://komedie.8u.cz/"> -->
-      <!--   <div> -->
-      <!--     <label class="screen&#45;reader&#45;text" for="s">Vyhledávání</label> -->
-      <!--     <input value="" name="s" id="s" type="text"> -->
-      <!--     <input id="searchsubmit" value="Hledat" type="submit"> -->
-      <!--   </div> -->
-      <!-- </form> -->
+  <h1><strong>Menu</strong></h1>
+  <ul class="list-unstyled menu-list">
+    <li><%= link_to 'Domů', root_path %></li>
+    <li><%= link_to 'Abecední seznam Komedií', list_comedies_path %></li>
+    <li><%= link_to 'Plakáty', images_path %></li>
+    <li><%= link_to 'Videa', videos_path %></li>
+  </ul>
 
-      <h4>Menu</h4>
-      <ul>
-        <li><%= link_to 'Domů', root_path %></li>
-        <li><%= link_to 'Abecední seznam Komedií', list_comedies_path %></li>
-        <li><%= link_to 'Plakáty', images_path %></li>
-        <li><%= link_to 'Videa', videos_path %></li>
-      </ul>
-
-      <h4>Náhodné komedie</h4>
-      <ul>
-        <% @random_comedies.each do |comedy| %>
-          <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
-        <% end %>
-      </ul>
-    </li>
+  <h1><strong>Náhodné komedie</strong></h1>
+  <ul class="list-unstyled menu-list">
+    <% @random_comedies.each do |comedy| %>
+      <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+    <% end %>
   </ul>
 </div>

@@ -1,0 +1,105 @@
+/* Globals
+------------------------------------- */
+.menu-list {
+  padding-left: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: #333;
+  }
+}
+
+/* Header
+------------------------------------- */
+#header {
+  margin-bottom: 20px;
+
+  .pink-line {
+    border-top: 10px solid $my-pink;
+  }
+
+  .navbar {
+    background-color: $my-pink;
+    border-radius: 0px;
+
+    a {
+      color: white;
+    }
+
+    .navbar-brand {
+      max-width: 150px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .navbar-nav {
+      float: right;
+
+      font-size: 1.1rem;
+      padding-top: 8px;
+    }
+  }
+}
+
+/* Sidebar
+------------------------------------- */
+#sidebar {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  padding-left: 20px;
+  border-left: 2px dotted #f3f3f3;
+
+  #logo {
+    margin-bottom: 15px;
+  }
+}
+
+/* Footer
+------------------------------------- */
+
+#footer {
+  padding: 10px;
+  margin: 20px auto 10px auto;
+  border-top: 2px dotted #ddd;
+
+  p {
+    padding: 5px 0;
+    text-align: center;
+  }
+}
+
+/* Content
+------------------------------------- */
+
+article {
+  margin-bottom: 30px;
+
+  small {
+    color: #777;
+    font-size: 0.8rem;
+    line-height: 2em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .entry-body {
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    padding-top: 5px;
+
+    .comedy-description {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}

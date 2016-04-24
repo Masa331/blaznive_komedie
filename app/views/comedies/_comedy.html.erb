@@ -1,20 +1,22 @@
-<div>
+<article>
   <h2>
-    <%= link_to comedy.bilingual_title, comedy_path(comedy) %>
+    <strong>
+      <%= link_to comedy.bilingual_title, comedy_path(comedy) %>
+    </strong>
   </h2>
 
   <small>
     <%= l(comedy.created_at) %> zařadil administrator
   </small>
 
-  <div class="entry">
+  <div class="entry-body">
     <% if comedy.image.present? && comedy.image.image_url.present? %>
       <%= link_to comedy_path(comedy) do %>
-        <%= image_tag comedy.image.image_url %>
+        <%= image_tag comedy.image.image_url, class: 'img-fluid' %>
       <% end %>
     <% end %>
 
-    <p><%= truncate(comedy.text, length: 200) %></p>
+    <p class="comedy-description"><%= truncate(comedy.text, length: 200) %></p>
     <%= link_to 'Číst dále...', comedy_path(comedy) %>
   </div>
-</div>
+</article>

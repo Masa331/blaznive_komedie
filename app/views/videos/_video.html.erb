@@ -1,17 +1,19 @@
-<div>
+<article>
   <h2>
-    <% if video.comedy.present? %>
-      <%= link_to video.comedy.bilingual_title, comedy_path(video.comedy) %>
-    <% else %>
-      <%= video.title %>
-    <% end %>
+    <strong>
+      <% if video.comedy.present? %>
+        <%= link_to video.comedy.bilingual_title, comedy_path(video.comedy) %>
+      <% else %>
+        <%= video.title %>
+      <% end %>
+    </strong>
   </h2>
 
   <small>
     <%= l(video.created_at) %> zařadil administrator
   </small>
 
-  <div class="entry">
+  <div class="entry-body embed-responsive embed-responsive-16by9">
     <p><%= video_iframe(video) %></p>
   </div>
-</div>
+</article>

@@ -1,38 +1,32 @@
-<div id="content" class="narrowcolumn">
-  <div>
-    <h2>
-      <%= link_to @comedy.bilingual_title, comedy_path(@comedy) %>
-    </h2>
+<article>
+  <h2><strong><%= link_to @comedy.bilingual_title, comedy_path(@comedy) %></strong></h2>
 
-    <small>
-      <%= l(@comedy.created_at) %> zařadil administrator
-    </small>
+  <small>
+    <%= l(@comedy.created_at) %> zařadil administrator
+  </small>
 
-    <div class="entry">
-      <% if @comedy.image %>
-        <%= link_to comedy_path(@comedy) do %>
-          <%= image_tag @comedy.image.image_url %>
-        <% end %>
+  <div class="entry-body">
+    <% if @comedy.image %>
+      <%= link_to comedy_path(@comedy) do %>
+        <%= image_tag @comedy.image.image_url, class: 'img-fluid' %>
+      <% end %>
+    <% end %>
+
+    <p><%= raw markdown.render(@comedy.text) %></p>
+
+    <h3><strong>Trailer</strong></h3>
+    <% if @comedy.video %>
+      <%= video_iframe(@comedy.video)  %>
+    <% end %>
+
+    <div>
+      <% if @next_comedy %>
+        <%= link_to(" ←   #{@next_comedy.bilingual_title}", comedy_path(@next_comedy), class: 'pull-left') %>
       <% end %>
 
-      <p><%= raw markdown.render(@comedy.text) %></p>
-
-      <h3>Trailer</h3>
-      <% if @comedy.video %>
-        <%= video_iframe(@comedy.video)  %>
+      <% if @previous_comedy %>
+        <%= link_to(" #{@previous_comedy.bilingual_title} → ", comedy_path(@previous_comedy), class: 'pull-right') %>
       <% end %>
-
-      <hr />
-
-      <div>
-        <% if @next_comedy %>
-          <%= link_to(" ←   #{@next_comedy.bilingual_title}", comedy_path(@next_comedy), class: 'alignleft') %>
-        <% end %>
-
-        <% if @previous_comedy %>
-          <%= link_to(" #{@previous_comedy.bilingual_title} → ", comedy_path(@previous_comedy), class: 'alignright') %>
-        <% end %>
-      </div>
     </div>
   </div>
-</div>
+</article>

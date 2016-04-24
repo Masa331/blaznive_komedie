@@ -1,15 +1,13 @@
-<div>
-  <h2>
-    <%= link_to image.comedy.bilingual_title, comedy_path(image.comedy) %>
-  </h2>
+<article>
+  <h2><strong><%= link_to image.comedy.bilingual_title, comedy_path(image.comedy) %></strong></h2>
 
   <small>
     <%= l(image.created_at) %> zařadil administrator
   </small>
 
-  <div class="entry">
+  <div class="entry-body">
     <%= link_to comedy_path(image.comedy) do %>
-      <%= image_tag(image.image_url) %>
+      <%= image_tag(image.image_url, class: 'img-fluid') %>
     <% end %>
   </div>
-</div>
+</article>
