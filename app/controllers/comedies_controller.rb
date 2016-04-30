@@ -8,8 +8,4 @@ class ComediesController < ApplicationController
   def index
     @comedies = Comedy.order(created_at: :desc).page(params[:page]).per(5)
   end
-
-  def list
-    @comedies = Comedy.order(:cz_title)
-  end
 end
