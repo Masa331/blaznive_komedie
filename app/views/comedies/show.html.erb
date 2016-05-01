@@ -2,7 +2,10 @@
   <h2><strong><%= link_to @comedy.bilingual_title, comedy_path(@comedy) %></strong></h2>
 
   <small>
-    <%= l(@comedy.created_at) %> zařadil administrator
+    <%= l(@comedy.created_at) %> zařadil administrator,
+    <% @comedy.tag_list.each do |tag| %>
+      <span class="label label-pill label-default"><%= tag %></span>
+    <% end %>
   </small>
 
   <div class="entry-body">

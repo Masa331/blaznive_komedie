@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'User on homepage' do
-  scenario 'sees all comedies' do
+RSpec.describe 'User' do
+  scenario "sees all comedies on their's index" do
     comedy = Comedy.create!(cz_title: 'Děsnej biják', en_title: 'Scary Movie',
                             text: "Lorem ipsum dolor #{'a' * 90}")
     comedy = Comedy.create!(cz_title: 'Děsnej dupák', en_title: 'Dance Flick',
@@ -14,5 +14,23 @@ RSpec.describe 'User on homepage' do
 
     expect(page).to have_content 'Děsnej dupák - Dance Flick'
     expect(page).to have_content 'Okoto ototo prototo'
+  end
+
+  scenario 'visits comedy show page' do
+    comedy = Comedy.create!(cz_title: 'Děsnej biják',
+                            en_title: 'Scary Movie',
+                            text: "Lorem ipsum dolor #{'a' * 90}",
+                            tag_list: 'Wayans, cool')
+
+    visit root_path
+
+    expect(page).to have_content 'Děsnej biják - Scary Movie'
+
+    click_on 'Děsnej biják - Scary Movie', match: :first
+
+    expect(page).to have_content 'Děsnej biják - Scary Movie'
+    expect(page).to have_content 'Lorem ipsum dolor'
+    expect(page).to have_content 'Wayans'
+    expect(page).to have_content 'cool'
   end
 end
