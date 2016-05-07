@@ -7,6 +7,12 @@
 
   <small>
     <%= l(comedy.created_at) %> zařadil administrator
+    <% if comedy.tags.any? %>
+      ,
+      <% comedy.tag_list.each do |tag| %>
+        <span class="label label-pill label-default"><%= tag %></span>
+      <% end %>
+    <% end %>
   </small>
 
   <div class="entry-body">
