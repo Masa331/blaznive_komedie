@@ -5,21 +5,23 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Marmaduk'
-en_title = 'Marmaduke'
-text = 'Devadesáti kilový pes marmaduk se spolue se svojí rodinou přestěhuje z amerického středozápadu do slunné Orange County. Obrovský pes má kvůli své velikosti zezačátku potíže najít si přátele a partnerku ale se vším mu naštěstí pomáhá nevlastní bratr Carlos a ruská modrá kočka. Bláznivá rodinná komedie plná mluvících zvířat.'
+cz_title = 'Santa je úchyl!'
+en_title = 'Bad Santa'
+text = 'Tenhle rok mají dva ztroskotaní trestanci Willie a Marcus geniální plán. Převlečou se za Santu a jeho pomocníka a objedou před vánoci velká nákupní centra a ta vykradou. Problém nastane, když potkají osmiletého chlapce, který se jim pravou podstatu vánoc snaží vyvětlit.'
+tag_list = ''
 
-video_title = 'Marmaduke'
-video_link = 'https://www.youtube.com/embed/xGx6IhjoWqw'
+video_title = 'Santa je úchyl!'
+video_link = 'https://www.youtube.com/embed/V6WO7q_80MI'
 
-image_title = 'Marmaduke'
-image_aws_title = 'marmaduke'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/marmaduke.jpg'
+image_title = 'Santa je úchyl!'
+image_aws_title = 'bad_santa'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/bad_santa.jpg'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
                         en_title: en_title,
-                        text: text)
+                        text: text,
+                        tag_list: tag_list)
 
 video = Video.create!(title: video_title,
                       comedy: comedy)
