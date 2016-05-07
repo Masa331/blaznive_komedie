@@ -19,6 +19,7 @@ gem 'aws-sdk', '~> 2.0'
 # Gem in rubygems not yet compatible with Rails 5
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 gem 'bootstrap', '>=4.0.0.alpha3'
+gem 'exception_notification'
 
 group :development do
   gem 'capistrano'
