@@ -73,7 +73,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = { address: Rails.application.secrets.smtp_address,
-                                         port: '465',
+                                         port: Rails.application.secrets.smtp_port,
                                          user_name: Rails.application.secrets.smtp_user,
                                          password: Rails.application.secrets.smtp_password }
   config.action_mailer.perform_deliveries = true
@@ -94,5 +94,5 @@ Rails.application.configure do
   config.middleware.use ExceptionNotification::Rack,
     email: { email_prefix: 'Komedie ERROR',
              sender_address: 'info@blaznivekomedie.cz',
-             exception_recipients: ['pdonat@seznma.cz'] }
+             exception_recipients: ['pdonat@seznam.cz'] }
 end
