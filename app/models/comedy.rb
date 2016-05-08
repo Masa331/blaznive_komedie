@@ -14,7 +14,7 @@ class Comedy < ApplicationRecord
     length: { minimum: 100 }
 
   def self.title_search(title)
-    where(arel_table[:cz_title].matches("%#{title}%").or(arel_table[:en_title].matches("%#{title}%")))
+    where("cz_title LIKE ?", "%#{title}%").or(where("en_title LIKE ?", "%#{title}%"))
   end
 
   def self.next_by_id(id)

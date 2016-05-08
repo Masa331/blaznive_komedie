@@ -1,0 +1,34 @@
+<h2>Výsledky výhledávání pro "<%= @searched_term %>":</h2>
+
+<h3>Komedie podle názvu</h3>
+<% if @comedies_by_title.any? %>
+  <ul>
+    <% @comedies_by_title.each do |comedy| %>
+      <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Žádný výsledek</p>
+<% end %>
+
+<h3>Komedie podle popisu</h3>
+<% if @comedies_by_text.any? %>
+  <ul>
+    <% @comedies_by_text.each do |comedy| %>
+      <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Žádný výsledek</p>
+<% end %>
+
+<h3>Tagy</h3>
+<% if @tags.any? %>
+  <ul>
+    <% @tags.each do |tag| %>
+      <li><%= tag.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Žádný výsledek</p>
+<% end %>

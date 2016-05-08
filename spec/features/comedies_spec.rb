@@ -33,4 +33,23 @@ RSpec.describe 'User' do
     expect(page).to have_content 'Wayans'
     expect(page).to have_content 'cool'
   end
+
+  scenario 'searches through comedies' do
+    comedy = Comedy.create!(cz_title: 'Děsnej biják',
+                            en_title: 'Scary Movie',
+                            text: "Lorem ipsum dolor #{'a' * 90}")
+    comedy = Comedy.create!(cz_title: 'Marmaduke',
+                            en_title: 'Marmaduke',
+                            text: "Lorem ipsum dolor #{'a' * 90}")
+
+    visit root_path
+
+    fill_in 'search_term', with: 'biják'
+    click_on 'Hledat'
+
+    within '.blog-main' do
+      expect(page).to have_content 'Děsnej biják - Scary Movie'
+      expect(page).to have_no_content 'Marmaduke'
+    end
+  end
 end

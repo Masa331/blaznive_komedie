@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # root 'static_pages#under_construction'
 
   resources :comedies
+  resources :search_results, only: :index
 
   namespace :comedy do
     resources :thumbnails, only: [:index]

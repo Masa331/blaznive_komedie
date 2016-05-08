@@ -5,13 +5,28 @@
     <% end %>
   </div>
 
-  <h1><strong>Menu</strong></h1>
-  <ul class="list-unstyled menu-list">
-    <li><%= link_to 'Domů', root_path %></li>
-    <li><%= link_to 'Abecední seznam Komedií', comedy_thumbnails_path %></li>
-    <li><%= link_to 'Plakáty', images_path %></li>
-    <li><%= link_to 'Videa', videos_path %></li>
-  </ul>
+  <div class="search">
+    <form action="/search_results" method="get">
+      <label class="sr-only" for="search_term">Vyhledávání</label>
+      <div class="input-group">
+        <input class="form-control" type="text" name="search_term" id="search_term" placeholder="Název, část textu, tag..." value="<%= params[:search_term] %>">
+
+        <span class="input-group-btn">
+          <button class="btn btn-secondary-outline" type="submit">Hledat</button>
+        </span>
+      </div>
+    </form>
+  </div>
+
+  <div class="sidebar-menu">
+    <h1><strong>Menu</strong></h1>
+    <ul class="list-unstyled menu-list">
+      <li><%= link_to 'Domů', root_path %></li>
+      <li><%= link_to 'Abecední seznam Komedií', comedy_thumbnails_path %></li>
+      <li><%= link_to 'Plakáty', images_path %></li>
+      <li><%= link_to 'Videa', videos_path %></li>
+    </ul>
+  </div>
 
   <h1><strong>Náhodné komedie</strong></h1>
   <ul class="list-unstyled menu-list">
