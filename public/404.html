@@ -15,18 +15,16 @@
     padding: 7px 4em 0 4em;
   }
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
   body > p {
     margin: 0 auto 1em;
     padding: 1em 0;
     background-color: #F7F7F7;
     border: 1px solid #CCC;
     color: #666;
+  }
+
+  .rick-roll {
+    margin-top: 5px;
   }
   </style>
 </head>
@@ -37,7 +35,24 @@
       <img src="/logo2.png" alt="logo">
     </a>
     <h1>Stránka, kterou hledáte bohužel neexistuje. (404)</h1>
-    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" allowfullscreen="allowfullscreen" frameborder="0" height="281" width="500"></iframe>
+
+
+    <div class="rick-roll">
+      <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" allowfullscreen="allowfullscreen" frameborder="0" height="281" width="500"></iframe>
+    </div>
+
+    <h2>Vyhledávání</h2>
+    <div class="search">
+      <form action="/search_results" method="get">
+        <div class="input-group">
+          <input class="form-control" type="text" name="search_term" id="search_term" placeholder="Název, část textu, tag...">
+
+          <span class="input-group-btn">
+            <button class="btn btn-secondary-outline" type="submit">Hledat</button>
+          </span>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 </html>

@@ -15,12 +15,6 @@
     padding: 7px 4em 0 4em;
   }
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
   body > p {
     margin: 0 auto 1em;
     padding: 1em 0;
@@ -37,6 +31,20 @@
       <img src="/logo2.png" alt="logo">
     </a>
     <h1>Omlouváme se ale něco se rozbilo. (500)</h1>
+    <img src="/sad_gif3.gif" style="width: 500px;">
+
+    <h2>Vyhledávání</h2>
+    <div class="search">
+      <form action="/search_results" method="get">
+        <div class="input-group">
+          <input class="form-control" type="text" name="search_term" id="search_term" placeholder="Název, část textu, tag...">
+
+          <span class="input-group-btn">
+            <button class="btn btn-secondary-outline" type="submit">Hledat</button>
+          </span>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 </html>
