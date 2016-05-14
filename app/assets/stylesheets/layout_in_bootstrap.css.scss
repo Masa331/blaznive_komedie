@@ -10,6 +10,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Bootstrap overwrites
+------------------------------------- */
+.page-item.active {
+  .page-link {
+    background-color: $my-pink;
+    border-color: $my-pink;
+
+    &:hover {
+      background-color: $my-pink;
+      border-color: $my-pink;
+    }
+  }
+}
 /* Header
 ------------------------------------- */
 #header {
@@ -110,4 +123,8 @@ article {
       margin-bottom: 15px;
     }
   }
+}
+
+.pagination-wrapper {
+  text-align: center;
 }
