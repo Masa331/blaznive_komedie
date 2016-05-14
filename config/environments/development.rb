@@ -33,7 +33,9 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = { address: Rails.application.secrets.smtp_address,
-                                         port: Rails.application.secrets.smtp_port }
+                                         port: Rails.application.secrets.smtp_port,
+                                         user_name: Rails.application.secrets.smtp_user,
+                                         password: Rails.application.secrets.smtp_password }
   config.action_mailer.perform_deliveries = true
 
   # Print deprecation notices to the Rails logger.
