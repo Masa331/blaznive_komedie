@@ -11,7 +11,6 @@ gem 'sass-rails'
 gem 'jquery-rails'
 
 gem 'sqlite3'
-gem 'friendly_id'
 
 gem 'redcarpet'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
