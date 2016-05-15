@@ -5,17 +5,17 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Santa je úchyl!'
-en_title = 'Bad Santa'
-text = 'Tenhle rok mají dva ztroskotaní trestanci Willie a Marcus geniální plán. Převlečou se za Santu a jeho pomocníka a objedou před vánoci velká nákupní centra a ta vykradou. Problém nastane, když potkají osmiletého chlapce, který se jim pravou podstatu vánoc snaží vyvětlit.'
-tag_list = ''
+cz_title = 'Sousedi 2'
+en_title = 'Neighbors 2: Sorority Rising'
+text = 'Seth Rogen a Rose Byrne se jako Mac a Kelly vrací v pokračování úspěšné komedie Sousedi. Po urputném boji z prvního dílu jsou Mac a Kelly konečně v klidu a rozhodnou se pořídít si další dítě. Kvůlu tomu se rozhodnou přestěhovat a prodat svůj starý dům. Bohužel jeho cena začne rapidně klesat jakmile se do sousedství nastěhuje parta vysokoškolaček, které pořádají jednu párty za druhou. Mac s Kelly velice rychle zjistí, že staré triky na nové nepřátele neplatí a tak si nakone musí na pozvat na pomoc svého bývalého úhlavního nepřítele z prvního dílu Teddyho(Zac Efron).'
+tag_list = 'Seth Rogen'
 
-video_title = 'Santa je úchyl!'
-video_link = 'https://www.youtube.com/embed/V6WO7q_80MI'
+video_title = 'Sousedi 2'
+video_link = 'https://www.youtube.com/embed/JymLhJMNq3E'
 
-image_title = 'Santa je úchyl!'
-image_aws_title = 'bad_santa'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/bad_santa.jpg'
+image_title = 'Sousedi 2'
+image_aws_title = 'neighbors2.jpg'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/sousedi2.jpg'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
