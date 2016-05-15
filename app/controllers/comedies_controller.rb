@@ -6,6 +6,6 @@ class ComediesController < ApplicationController
   end
 
   def index
-    @comedies = Comedy.order(created_at: :desc).page(params[:page]).per(5)
+    @comedies = Comedy.all.includes(:image, :tags).order(created_at: :desc).page(params[:page]).per(5)
   end
 end
