@@ -3,19 +3,15 @@
 
   <small>
     <%= l(@comedy.created_at) %> zařadil administrator
-    <% if @comedy.tags.any? %>
-      ,
-      <% @comedy.tag_list.each do |tag| %>
-        <span class="label label-pill label-default"><%= tag %></span>
-      <% end %>
+
+    <% @comedy.tag_list.each do |tag| %>
+      <span class="label label-pill label-default"><%= tag %></span>
     <% end %>
   </small>
 
   <div class="entry-body">
-    <% if @comedy.image %>
-      <%= link_to comedy_path(@comedy) do %>
-        <%= image_tag @comedy.image.image_url, class: 'img-fluid' %>
-      <% end %>
+    <%= link_to comedy_path(@comedy) do %>
+      <%= image_tag @comedy.image.image_url, class: 'img-fluid' %>
     <% end %>
 
     <p><%= raw markdown.render(@comedy.text) %></p>
