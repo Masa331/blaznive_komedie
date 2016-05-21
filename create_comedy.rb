@@ -5,17 +5,17 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Sousedi 2'
-en_title = 'Neighbors 2: Sorority Rising'
-text = 'Seth Rogen a Rose Byrne se jako Mac a Kelly vrací v pokračování úspěšné komedie Sousedi. Po urputném boji z prvního dílu jsou Mac a Kelly konečně v klidu a rozhodnou se pořídít si další dítě. Kvůlu tomu se rozhodnou přestěhovat a prodat svůj starý dům. Bohužel jeho cena začne rapidně klesat jakmile se do sousedství nastěhuje parta vysokoškolaček, které pořádají jednu párty za druhou. Mac s Kelly velice rychle zjistí, že staré triky na nové nepřátele neplatí a tak si nakone musí na pozvat na pomoc svého bývalého úhlavního nepřítele z prvního dílu Teddyho(Zac Efron).'
-tag_list = 'Seth Rogen'
+cz_title = 'Po čem ženy touží'
+en_title = 'What Women Want'
+text = 'Nick Marshall (Mel Gibson) je chamtivý šovinistický hlupák, zaměstnaný ve velmi dobře prosperující reklamní agentuře v Chicagu, kterou vede Dan Vanamaker (Alan Alda). Ženy jsou pro něj převážně jako tmel v jeho rukou, což podporuje jeho přesvědčení, že je schopen se vmanévrovat do ženské atmosféry. Je přesvědčen, že jedině on má nárok na uvolněné místo kreativního ředitele v agentuře. Ale "jeho" místo, k Nickově velkému překvapení a zklamání, dostává Darcy Maguire (Helen Hunt), ambiciózní kariéristická žena, která, zdá se, je předurčena být v neustálém konfliktu s egoistickým Nickem. Po nehodě v koupelně (Nick zasažen elektrickým proudem spadne do vany), ráno objeví, že má schopnost poslouchat, co si ženy myslí. Jeho služebná se nepošklebovala jako obvykle, dokonce ani jeho vrátná mu slovně nelichotí, jaké má krásné pozadí. To je, co si tyto ženy myslí, co je uloženo jen v jejich hlavách. Zpočátku je Nick poměrně zděšen, ale brzy je rozverně vzrušen představou, že zná všechno, co je ukryto v ženském mozku. A to se velmi hodí v přítomnosti kolegyně Darcy. Náhle dva rivalové jsou spojenci.(oficiální text distributora)'
+tag_list = 'Romantické'
 
-video_title = 'Sousedi 2'
-video_link = 'https://www.youtube.com/embed/JymLhJMNq3E'
+video_title = 'Po čem ženy touží'
+video_link = 'https://www.youtube.com/embed/9mow1lpeD3g'
 
-image_title = 'Sousedi 2'
-image_aws_title = 'neighbors2.jpg'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/sousedi2.jpg'
+image_title = 'Po čem ženy touží'
+image_aws_title = 'what_women_want.jpg'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/what_women_want.jpg'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
