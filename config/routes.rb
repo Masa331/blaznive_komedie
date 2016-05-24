@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resource :user, only: [:show, :edit, :update]
+
+  post 'logins/create'
+  get 'logins/new'
+  get 'sessions/create'
+  delete 'sessions/destroy'
+
   resources :comedies
   resources :search_results, only: :index
 

@@ -1,0 +1,48 @@
+<div id="sidebar" class='hidden-xs-down'>
+  <div id="logo">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo2.png', class: 'img-fluid' %>
+    <% end %>
+  </div>
+
+  <% unless current_user.anonymous? %>
+  <p>
+    <span>Přihlášen jako</span>
+    <%= link_to current_user.name, user_path %>
+  </p>
+  <% end %>
+
+  <h1><strong>Vyhledávání</strong></h1>
+  <div class="search">
+    <form action="/search_results" method="get">
+      <label class="sr-only" for="search_term">Vyhledávání</label>
+      <div class="input-group">
+        <input class="form-control" type="text" name="search_term" id="search_term" placeholder="Název, část textu, tag..." value="<%= params[:search_term] %>">
+
+        <span class="input-group-btn">
+          <button class="btn btn-secondary-outline" type="submit">Hledat</button>
+        </span>
+      </div>
+    </form>
+  </div>
+
+  <h1><strong>Menu</strong></h1>
+  <div class="sidebar-menu">
+    <ul class="list-unstyled menu-list">
+      <li><%= link_to 'Domů', root_path %></li>
+      <li><%= link_to 'Abecední seznam Komedií', comedy_thumbnails_path %></li>
+      <li><%= link_to 'Plakáty', images_path %></li>
+      <li><%= link_to 'Videa', videos_path %></li>
+      <% if current_user.anonymous? %>
+        <li><%= link_to 'Přihlásit', logins_new_path %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <h1><strong>Náhodné komedie</strong></h1>
+  <ul class="list-unstyled menu-list">
+    <% @random_comedies.each do |comedy| %>
+      <li><%= link_to comedy.bilingual_title, comedy_path(comedy) %></li>
+    <% end %>
+  </ul>
+</div>

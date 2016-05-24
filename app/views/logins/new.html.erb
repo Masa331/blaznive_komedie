@@ -1,0 +1,17 @@
+<h2><strong>Přihlášení</strong></h2>
+
+<%= form_tag logins_create_path do %>
+  <fieldset class='form-group'>
+    <%= label_tag 'Přihlášení', nil, class: 'sr-only', for: 'email' %>
+    <div class="input-group">
+      <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Vyplň email na který ti bude zaslán jednorázový přihlašovací link :)', required: true %>
+
+      <span class="input-group-btn">
+        <%= button_tag 'Přihlásit', class: "btn btn-success-outline" %>
+      </span>
+    </div>
+
+  </fieldset>
+<% end %>
+
+<%= image_tag 'happy_patrick_big.gif', class: 'img-fluid center-block' %>

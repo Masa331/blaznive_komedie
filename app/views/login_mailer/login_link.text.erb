@@ -1,0 +1,5 @@
+Ahoj! Pro přihlášení do blaznivekomedie.cz klikni přejdi na následující link:
+
+<%= sessions_create_url(host: 'localhost:3000', token: @user.login_token) %>
+
+Link je platný 15 minut. Pokud pčihlášení nestihneš, tak si vygeneruj nový.
