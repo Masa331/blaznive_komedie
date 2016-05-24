@@ -4,10 +4,11 @@ RSpec.describe 'User' do
   before do
     comedy1 = Comedy.create!(cz_title: 'Děsnej biják', en_title: 'Scary Movie',
                             text: "Lorem ipsum dolor #{'a' * 90}", tag_list: 'Wayans, cool')
-    Image.create!(comedy: comedy1, title: 'titulek', image_url: 'obrazek.cz')
+    Image.create!(comedy: comedy1, title: 'titulek')
+
     comedy2 = Comedy.create!(cz_title: 'Děsnej dupák', en_title: 'Dance Flick',
                             text: "Okoto ototo prototo #{'a' * 90}")
-    Image.create!(comedy: comedy2, title: 'titulek', image_url: 'obrazek.cz')
+    Image.create!(comedy: comedy2, title: 'titulek')
 
     video = Video.create!(comedy: comedy1, title: 'Video')
     YoutubeLink.create!(linker: video, uri: 'video.cz')

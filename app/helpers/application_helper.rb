@@ -17,6 +17,12 @@ module ApplicationHelper
     end
   end
 
+  def alert_css_class(key)
+    { "notice" => 'success',
+      "alert" => 'danger'
+    }.fetch(key, 'success')
+  end
+
   private
 
   def renderer

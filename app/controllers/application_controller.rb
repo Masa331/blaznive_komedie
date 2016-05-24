@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :load_random_comedies
   before_action :set_view_variant
 
+  helper_method :current_user
+
   private
 
   def set_view_variant
@@ -21,6 +23,14 @@ class ApplicationController < ActionController::Base
     elsif browser.device.mobile?
       :phone
     end
+  end
+
+  def current_user=(user)
+    session[:user_id] = user.id
+  end
+
+  def current_user
+    User.find_by(id: session[:user_id]) || NullUser.new
   end
 
   def load_random_comedies
