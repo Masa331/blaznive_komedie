@@ -5,6 +5,14 @@
     <% end %>
   </div>
 
+  <% unless current_user.anonymous? %>
+  <p>
+    <span>Přihlášen jako</span>
+    <%= link_to current_user.name, user_path %>
+  </p>
+  <% end %>
+
+  <h1><strong>Vyhledávání</strong></h1>
   <div class="search">
     <form action="/search_results" method="get">
       <label class="sr-only" for="search_term">Vyhledávání</label>

@@ -7,22 +7,47 @@
         </strong>
       </h2>
 
-      <small>
-        <%= l(comedy.created_at) %> zařadil administrator
-
-        <% comedy.tags.each do |tag| %>
-          <span class="label label-pill label-default"><%= tag.name %></span>
-        <% end %>
-      </small>
+      <!-- <small> -->
+      <!--   <%= l(comedy.created_at) %> zařadil administrator -->
+      <!--  -->
+      <!--   <% comedy.tags.each do |tag| %> -->
+      <!--     <span class="label label&#45;pill label&#45;default"><%= tag.name %></span> -->
+      <!--   <% end %> -->
+      <!-- </small> -->
 
       <div class="entry-body">
-        <%= link_to comedy_path(comedy) do %>
-          <%= image_tag comedy.image.image_url, class: 'img-fluid' %>
-        <% end %>
+        <%# <%= image_tag comedy.image.image_url, class: 'img-fluid' %>
+    <div class="row">
+      <div class="col-xl-8">
+        <%= image_tag comedy.image.image_url, class: 'img-fluid' %>
+      </div>
 
+      <div class="col-xl-4 no-left-gutter hidden-lg-down">
+        <br>
+          Přidáno <%= l(comedy.created_at) %>
+        <br>
+          4/5
+        <br>
+        <a href="#">4 Komentáře</a>
 
-        <p class="comedy-description"><%= truncate(comedy.text, length: 200) %></p>
-        <%= link_to 'Číst dále...', comedy_path(comedy) %>
+        <h3>Tagy</h3>
+        <ul>
+          <% comedy.tag_list.each do |tag| %>
+            <li>
+            
+            <span class="label label-pill label-default"><%= tag %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+        <p class="comedy-description">
+          <%= truncate(comedy.text, length: 200) %>
+          <strong>
+            <%= link_to 'Číst dále', comedy_path(comedy) %>
+          </strong>
+        </p>
       </div>
     </article>
   <% end %>
