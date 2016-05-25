@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  # Uncomment this for enabling maintenance page
-  # get '*x/*x', to: 'static_pages#under_construction'
-  # root 'static_pages#under_construction'
-
   resources :comedies
   resources :search_results, only: :index
 
