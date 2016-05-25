@@ -1,5 +1,5 @@
 <article>
-  <h2><strong><%= @comedy.bilingual_title %></strong></h2>
+  <h1><%= @comedy.bilingual_title %></h1>
 
   <div class="entry-body">
     <div class="row">
@@ -16,12 +16,15 @@
         <% end %>
       </div>
     </div>
+
+    <p><%= raw markdown.render(@comedy.text) %></p>
+
+    <h2>Trailer</h2>
+    <div class="entry-body embed-responsive embed-responsive-16by9">
+      <%= video_iframe(@comedy.video)  %>
+    </div>
   </div>
 
-  <p><%= raw markdown.render(@comedy.text) %></p>
-
-  <h3><strong>Trailer</strong></h3>
-  <%= video_iframe(@comedy.video)  %>
 
   <div>
     <% if @next_comedy %>

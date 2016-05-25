@@ -1,4 +1,19 @@
 <div>
-  <%= render @images %>
+  <% @images.each do |image| %>
+    <article>
+      <h2><%= link_to image.comedy.bilingual_title, comedy_path(image.comedy) %></h2>
+
+      <small>
+        <%= l(image.created_at) %> zařadil administrator
+      </small>
+
+      <div class="entry-body">
+        <%= link_to comedy_path(image.comedy) do %>
+          <%= image_tag(image.image_url, class: 'img-fluid') %>
+        <% end %>
+      </div>
+    </article>
+  <% end %>
+
   <%= paginate @images %>
 </div>

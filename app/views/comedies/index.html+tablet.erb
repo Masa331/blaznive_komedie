@@ -1,7 +1,7 @@
 <div>
   <% @comedies.each do |comedy| %>
     <article>
-      <h2><strong><%= link_to comedy.bilingual_title, comedy_path(comedy) %></strong></h2>
+      <h1><strong><%= link_to comedy.bilingual_title, comedy_path(comedy) %></strong></h1>
 
       <small>
         <%= l(comedy.created_at) %>

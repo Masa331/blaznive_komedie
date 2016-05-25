@@ -1,7 +1,7 @@
 <div>
   <% @comedies.each do |comedy| %>
     <article>
-      <h2><strong><%= link_to comedy.bilingual_title, comedy_path(comedy) %></strong></h2>
+      <h1><%= link_to comedy.bilingual_title, comedy_path(comedy) %></h1>
 
       <div class="entry-body">
         <%= image_tag comedy.image.image_url, class: 'img-fluid' %>

@@ -1,4 +1,18 @@
 <div>
-  <%= render @videos %>
+  <% @videos.each do |video| %>
+    <article>
+      <h2><%= link_to video.comedy.bilingual_title, comedy_path(video.comedy) %></h2>
+      <small>
+        <%= l(video.created_at) %> zařadil administrator
+      </small>
+
+      <div class="entry-body">
+        <div class="entry-body embed-responsive embed-responsive-16by9">
+          <p><%= video_iframe(video) %></p>
+        </div>
+      </div>
+    </article>
+  <% end %>
+
   <%= paginate @videos %>
 </div>
