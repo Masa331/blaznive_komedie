@@ -69,6 +69,7 @@ GEM
     bootstrap (4.0.0.alpha3)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    browser (2.1.0)
     builder (3.2.2)
     byebug (9.0.3)
     capistrano (3.5.0)
@@ -251,6 +252,7 @@ DEPENDENCIES
   acts-as-taggable-on!
   aws-sdk (~> 2.0)
   bootstrap (>= 4.0.0.alpha3)
+  browser
   capistrano
   capistrano-bundler
   capistrano-rails

@@ -1,0 +1,28 @@
+<div>
+  <% @comedies.each do |comedy| %>
+    <article>
+      <h2><strong><%= link_to comedy.bilingual_title, comedy_path(comedy) %></strong></h2>
+
+      <small>
+        <%= l(comedy.created_at) %>
+        |
+        <% comedy.tags.each do |tag| %>
+          <span class="label label-pill label-default"><%= tag.name %></span>
+        <% end %>
+      </small>
+
+      <div class="entry-body">
+        <%= image_tag comedy.image.image_url, class: 'img-fluid' %>
+
+        <p class="comedy-description">
+          <%= truncate(comedy.text, length: 200) %>
+          <strong>
+            <%= link_to 'Číst dále', comedy_path(comedy) %>
+          </strong>
+        </p>
+      </div>
+    </article>
+  <% end %>
+
+  <%= paginate @comedies %>
+</div>

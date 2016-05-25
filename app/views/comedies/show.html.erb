@@ -1,13 +1,5 @@
 <article>
-  <h2><strong><%= link_to @comedy.bilingual_title, comedy_path(@comedy) %></strong></h2>
-
-  <!-- <small> -->
-  <!--   <%= l(@comedy.created_at) %> zařadil administrator -->
-  <!--  -->
-  <!--   <% @comedy.tag_list.each do |tag| %> -->
-  <!--     <span class="label label&#45;pill label&#45;default"><%= tag %></span> -->
-  <!--   <% end %> -->
-  <!-- </small> -->
+  <h2><strong><%= @comedy.bilingual_title %></strong></h2>
 
   <div class="entry-body">
     <div class="row">
@@ -15,41 +7,29 @@
         <%= image_tag @comedy.image.image_url, class: 'img-fluid' %>
       </div>
 
-      <div class="col-xl-4 no-left-gutter hidden-lg-down">
-        <br>
-          Přidáno <%= l(@comedy.created_at) %>
-        <br>
-          4/5
-        <br>
-        <a href="#">4 Komentáře</a>
+      <div class="col-xl-4 no-left-gutter">
+        Přidáno
+        <%= l(@comedy.created_at) %>
 
-        <h3>Tagy</h3>
-        <ul>
-          <% @comedy.tag_list.each do |tag| %>
-            <li>
-            
-            <span class="label label-pill label-default"><%= tag %></span>
-            </li>
-          <% end %>
-        </ul>
+        <% @comedy.tag_list.each do |tag| %>
+          <span class="label label-pill label-default"><%= tag %></span>
+        <% end %>
       </div>
     </div>
+  </div>
 
-    <p><%= raw markdown.render(@comedy.text) %></p>
+  <p><%= raw markdown.render(@comedy.text) %></p>
 
-    <h3><strong>Trailer</strong></h3>
-    <% if @comedy.video %>
-      <%= video_iframe(@comedy.video)  %>
+  <h3><strong>Trailer</strong></h3>
+  <%= video_iframe(@comedy.video)  %>
+
+  <div>
+    <% if @next_comedy %>
+      <%= link_to(" ←   #{@next_comedy.bilingual_title}", comedy_path(@next_comedy), class: 'pull-left') %>
     <% end %>
 
-    <div>
-      <% if @next_comedy %>
-        <%= link_to(" ←   #{@next_comedy.bilingual_title}", comedy_path(@next_comedy), class: 'pull-left') %>
-      <% end %>
-
-      <% if @previous_comedy %>
-        <%= link_to(" #{@previous_comedy.bilingual_title} → ", comedy_path(@previous_comedy), class: 'pull-right') %>
-      <% end %>
-    </div>
+    <% if @previous_comedy %>
+      <%= link_to(" #{@previous_comedy.bilingual_title} → ", comedy_path(@previous_comedy), class: 'pull-right') %>
+    <% end %>
   </div>
 </article>

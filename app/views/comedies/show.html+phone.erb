@@ -1,0 +1,22 @@
+<article>
+  <h2><strong><%= @comedy.bilingual_title %></strong></h2>
+
+  <div class="entry-body">
+    <%= image_tag @comedy.image.image_url, class: 'img-fluid' %>
+
+    <p><%= raw markdown.render(@comedy.text) %></p>
+
+    <h3><strong>Trailer</strong></h3>
+    <%= video_iframe(@comedy.video)  %>
+  </div>
+
+  <div>
+    <% if @next_comedy %>
+      <%= link_to(" ←   #{@next_comedy.bilingual_title}", comedy_path(@next_comedy), class: 'pull-left') %>
+    <% end %>
+
+    <% if @previous_comedy %>
+      <%= link_to(" #{@previous_comedy.bilingual_title} → ", comedy_path(@previous_comedy), class: 'pull-right') %>
+    <% end %>
+  </div>
+</article>
