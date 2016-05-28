@@ -5,17 +5,17 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Po čem ženy touží'
-en_title = 'What Women Want'
-text = 'Nick Marshall (Mel Gibson) je chamtivý šovinistický hlupák, zaměstnaný ve velmi dobře prosperující reklamní agentuře v Chicagu, kterou vede Dan Vanamaker (Alan Alda). Ženy jsou pro něj převážně jako tmel v jeho rukou, což podporuje jeho přesvědčení, že je schopen se vmanévrovat do ženské atmosféry. Je přesvědčen, že jedině on má nárok na uvolněné místo kreativního ředitele v agentuře. Ale "jeho" místo, k Nickově velkému překvapení a zklamání, dostává Darcy Maguire (Helen Hunt), ambiciózní kariéristická žena, která, zdá se, je předurčena být v neustálém konfliktu s egoistickým Nickem. Po nehodě v koupelně (Nick zasažen elektrickým proudem spadne do vany), ráno objeví, že má schopnost poslouchat, co si ženy myslí. Jeho služebná se nepošklebovala jako obvykle, dokonce ani jeho vrátná mu slovně nelichotí, jaké má krásné pozadí. To je, co si tyto ženy myslí, co je uloženo jen v jejich hlavách. Zpočátku je Nick poměrně zděšen, ale brzy je rozverně vzrušen představou, že zná všechno, co je ukryto v ženském mozku. A to se velmi hodí v přítomnosti kolegyně Darcy. Náhle dva rivalové jsou spojenci.(oficiální text distributora)'
-tag_list = 'Romantické'
+cz_title = 'Raubíř Ralf'
+en_title = 'Wreck-It Ralph'
+text = 'Raubíř Ralf touží po tom, aby byl milován tak, jako perfektní Good Guy jménem Fix-It Felix z jeho hry. Problém je v tom, že nikdo nemiluje Bad Guye. Ale oni milují hrdiny… takže když přichází moderní hra ve stylu kdo dřív vystřelí, kde se objeví neoblomná Sergeant Calhoun, Ralph to vidí jako příležitost k hrdinství a štěstí. Vplíží se do hry s jednoduchým plánem – vyhrát medaili – ale brzy zničí všechno a nechtěně vypustí smrtelného nepřítele, který ohrožuje každou hru v arkádě. Jediná Ralphova naděje? Vanellope von Schweetz, mladá problémistka z hry o závodění, která je tou jedinou, kdo může Ralpha naučit, co to znamená být Good Guy. Ale zjistí, že je natolik dobrý, aby se stal hrdinou před tím, než se objeví pro celou arkádu nápis „Game Over“? (oficiální text distributora)'
+tag_list = 'Rodinné, Animované'
 
-video_title = 'Po čem ženy touží'
-video_link = 'https://www.youtube.com/embed/9mow1lpeD3g'
+video_title = 'Raubíř Ralf'
+video_link = 'https://www.youtube.com/embed/qmTfZpIn9uE'
 
-image_title = 'Po čem ženy touží'
-image_aws_title = 'what_women_want.jpg'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/what_women_want.jpg'
+image_title = 'Raubíř Ralf'
+image_aws_title = 'raubir_ralf.jpg'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/raubir_ralf.jpg'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
