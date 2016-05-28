@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
   def index
-    @images = Image.all.page(params[:page]).per(10)
+    @images = Image.order(created_at: :desc).page(params[:page]).per(10)
   end
 end
