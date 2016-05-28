@@ -18,6 +18,12 @@ h2 {
   font-size: 1.2rem;
 }
 
+span.label.label-pill.label-default {
+  a {
+    color: white;
+  }
+}
+
 /* Bootstrap overwrites
 ------------------------------------- */
 .page-item.active {
