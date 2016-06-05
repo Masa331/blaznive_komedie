@@ -5,17 +5,17 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Raubíř Ralf'
-en_title = 'Wreck-It Ralph'
-text = 'Raubíř Ralf touží po tom, aby byl milován tak, jako perfektní Good Guy jménem Fix-It Felix z jeho hry. Problém je v tom, že nikdo nemiluje Bad Guye. Ale oni milují hrdiny… takže když přichází moderní hra ve stylu kdo dřív vystřelí, kde se objeví neoblomná Sergeant Calhoun, Ralph to vidí jako příležitost k hrdinství a štěstí. Vplíží se do hry s jednoduchým plánem – vyhrát medaili – ale brzy zničí všechno a nechtěně vypustí smrtelného nepřítele, který ohrožuje každou hru v arkádě. Jediná Ralphova naděje? Vanellope von Schweetz, mladá problémistka z hry o závodění, která je tou jedinou, kdo může Ralpha naučit, co to znamená být Good Guy. Ale zjistí, že je natolik dobrý, aby se stal hrdinou před tím, než se objeví pro celou arkádu nápis „Game Over“? (oficiální text distributora)'
-tag_list = 'Rodinné, Animované'
+cz_title = 'Milionový závod'
+en_title = 'Rat Rate'
+text = 'Bohatý majitel casina Donald Sinclair (John Cleese) připravi pro obveselení svých klientů novinku: veliký závod o dva miliony dolarů. Zbohatlíci se o ně ovšem nebudou ucházet sami, ale budou sázet na šest týmů, lačnících po bohatství. Potenciální milionáři jsou vybráni náhodně a vzniknou tak notně bizarní sestavy: Rozhádaná židovská rodina s užvaněným otcem (Jon Lovitz), bratři-kriminálníci (Seth Green, Vince Vileuf), upjatý obchodník a krásná pilotka (Breckin Meyer, Amy Smart), matka, usmiřující se s dcerou (Whoopi Goldberg, Lanei Chapman), fotbalový rozhodčí na útěku (Cuba Gooding, Jr.) a narkoleptický Ital (Rowan Atkinson). Na cestu z Las Vegas do Nového Mexika mohou vyrazit jakkoli - pěšky, autem, letadlem, na koni, nebo v balónu. Pravidla nejsou žádná - zbohatne jen ten nejrychlejší... a nejzákeřnější. (oficiální text distributora)'
+tag_list = 'Cuba Gooding Jr.'
 
-video_title = 'Raubíř Ralf'
-video_link = 'https://www.youtube.com/embed/qmTfZpIn9uE'
+video_title = 'Milionový závod - Rat Race'
+video_link = 'https://www.youtube.com/embed/2FPN8H9jiXY'
 
-image_title = 'Raubíř Ralf'
-image_aws_title = 'raubir_ralf.jpg'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/raubir_ralf.jpg'
+image_title = 'Rat Race'
+image_aws_title = 'rat_race.png'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/rat_race.png'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
