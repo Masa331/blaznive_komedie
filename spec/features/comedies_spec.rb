@@ -1,12 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'User' do
-  scenario "sees all comedies on their's index" do
-    comedy = Comedy.create!(cz_title: 'Děsnej biják', en_title: 'Scary Movie',
-                            text: "Lorem ipsum dolor #{'a' * 90}")
-    comedy = Comedy.create!(cz_title: 'Děsnej dupák', en_title: 'Dance Flick',
+  before do
+    comedy1 = Comedy.create!(cz_title: 'Děsnej biják', en_title: 'Scary Movie',
+                            text: "Lorem ipsum dolor #{'a' * 90}", tag_list: 'Wayans, cool')
+    Image.create!(comedy: comedy1, title: 'titulek', image_url: 'obrazek.cz')
+    comedy2 = Comedy.create!(cz_title: 'Děsnej dupák', en_title: 'Dance Flick',
                             text: "Okoto ototo prototo #{'a' * 90}")
+    Image.create!(comedy: comedy2, title: 'titulek', image_url: 'obrazek.cz')
 
+    video = Video.create!(comedy: comedy1, title: 'Video')
+    YoutubeLink.create!(linker: video, uri: 'video.cz')
+  end
+
+  scenario "sees all comedies on their's index" do
     visit root_path
 
     expect(page).to have_content 'Děsnej biják - Scary Movie'
@@ -17,11 +24,6 @@ RSpec.describe 'User' do
   end
 
   scenario 'visits comedy show page' do
-    comedy = Comedy.create!(cz_title: 'Děsnej biják',
-                            en_title: 'Scary Movie',
-                            text: "Lorem ipsum dolor #{'a' * 90}",
-                            tag_list: 'Wayans, cool')
-
     visit root_path
 
     expect(page).to have_content 'Děsnej biják - Scary Movie'
@@ -35,13 +37,6 @@ RSpec.describe 'User' do
   end
 
   scenario 'searches through comedies' do
-    comedy = Comedy.create!(cz_title: 'Děsnej biják',
-                            en_title: 'Scary Movie',
-                            text: "Lorem ipsum dolor #{'a' * 90}")
-    comedy = Comedy.create!(cz_title: 'Marmaduke',
-                            en_title: 'Marmaduke',
-                            text: "Lorem ipsum dolor #{'a' * 90}")
-
     visit root_path
 
     fill_in 'search_term', with: 'biják'
