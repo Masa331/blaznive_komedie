@@ -5,17 +5,18 @@ def content_type(filepath)
   MIME::Types.type_for(filepath).first.to_s
 end
 
-cz_title = 'Milionový závod'
-en_title = 'Rat Rate'
-text = 'Bohatý majitel casina Donald Sinclair (John Cleese) připravi pro obveselení svých klientů novinku: veliký závod o dva miliony dolarů. Zbohatlíci se o ně ovšem nebudou ucházet sami, ale budou sázet na šest týmů, lačnících po bohatství. Potenciální milionáři jsou vybráni náhodně a vzniknou tak notně bizarní sestavy: Rozhádaná židovská rodina s užvaněným otcem (Jon Lovitz), bratři-kriminálníci (Seth Green, Vince Vileuf), upjatý obchodník a krásná pilotka (Breckin Meyer, Amy Smart), matka, usmiřující se s dcerou (Whoopi Goldberg, Lanei Chapman), fotbalový rozhodčí na útěku (Cuba Gooding, Jr.) a narkoleptický Ital (Rowan Atkinson). Na cestu z Las Vegas do Nového Mexika mohou vyrazit jakkoli - pěšky, autem, letadlem, na koni, nebo v balónu. Pravidla nejsou žádná - zbohatne jen ten nejrychlejší... a nejzákeřnější. (oficiální text distributora)'
-tag_list = 'Cuba Gooding Jr.'
+cz_title = "The Bronze"
+en_title = "The Bronze"
+text = "Hope Ann Greggory(Melissa Raunch - Big Bang Theory) je bývala gymnastická olympijská medailistka, jejíž kariéru předčasně ukončilo zranění. Teď už je náplní Hopina dne akorát poflakování se po rodném městečku. Když se ale v městečku objeví jiná mladá nadějná gymnastka, musí se Hope rozhodnout co s tím. Arogantně jí setře, aby neohrozila zbytky svojí slávy, nebo se s velkým sebezapřením pokusí ji trénovat?"
 
-video_title = 'Milionový závod - Rat Race'
-video_link = 'https://www.youtube.com/embed/2FPN8H9jiXY'
+tag_list = ''
 
-image_title = 'Rat Race'
-image_aws_title = 'rat_race.png'
-image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/rat_race.png'
+video_title = "The Bronze"
+video_link = "https://www.youtube.com/embed/6B7JH30oCME"
+
+image_title = 'The Bronze'
+image_aws_title = 'the_bronze.jpeg'
+image_path = '/home/masa331/pracovni/imagine/komedie/comedy_posters/the_bronze.jpeg'
 image_content_type = content_type(image_path)
 
 comedy = Comedy.create!(cz_title: cz_title,
