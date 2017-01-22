@@ -95,6 +95,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
@@ -103,12 +107,30 @@ GEM
     exception_notification (4.1.1)
       actionmailer (>= 3.0.4)
       activesupport (>= 3.0.4)
+    excon (0.54.0)
     execjs (2.7.0)
     ffi (1.9.12)
     flamegraph (0.9.5)
+    fog-aws (1.2.0)
+      fog-core (~> 1.38)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-core (1.43.0)
+      builder
+      excon (~> 0.49)
+      formatador (~> 0.2)
+    fog-json (1.0.2)
+      fog-core (~> 1.0)
+      multi_json (~> 1.10)
+    fog-xml (0.1.2)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    ipaddress (0.8.3)
     jmespath (1.2.4)
       json_pure (>= 1.8.1)
     jquery-rails (4.1.1)
@@ -131,6 +153,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    multi_json (1.12.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
@@ -257,9 +280,11 @@ DEPENDENCIES
   capistrano-rails
   capistrano3-puma
   capybara
+  carrierwave
   exception_notification
   execjs
   flamegraph
+  fog-aws
   jquery-rails
   kaminari!
   listen (~> 3.0.5)
@@ -281,4 +306,4 @@ DEPENDENCIES
   web-console (~> 3.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.6

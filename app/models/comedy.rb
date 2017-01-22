@@ -3,6 +3,7 @@ class Comedy < ApplicationRecord
 
   has_one :image,
     dependent: :destroy
+
   has_one :video,
     dependent: :destroy
 

@@ -12,6 +12,8 @@ gem 'sass-rails'
 gem 'jquery-rails'
 
 gem 'sqlite3'
+gem 'carrierwave'
+gem 'fog-aws'
 
 gem 'redcarpet'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'

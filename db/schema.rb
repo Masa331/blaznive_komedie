@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160514205606) do
+ActiveRecord::Schema.define(version: 20170122165216) do
 
   create_table "comedies", force: :cascade do |t|
     t.string   "cz_title"
@@ -21,6 +20,16 @@ ActiveRecord::Schema.define(version: 20160514205606) do
     t.string   "en_title"
   end
 
+  create_table "comedy_comments", force: :cascade do |t|
+    t.string   "text"
+    t.integer  "user_id"
+    t.integer  "comedy_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comedy_id"], name: "index_comedy_comments_on_comedy_id"
+    t.index ["user_id"], name: "index_comedy_comments_on_user_id"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string   "title"
     t.integer  "comedy_id"
@@ -28,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160514205606) do
     t.datetime "updated_at"
     t.string   "image_url"
     t.string   "alt"
+    t.string   "image"
   end
 
   create_table "links", force: :cascade do |t|
@@ -58,6 +68,15 @@ ActiveRecord::Schema.define(version: 20160514205606) do
     t.string  "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "login_token"
+    t.datetime "login_token_valid_until"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "videos", force: :cascade do |t|
