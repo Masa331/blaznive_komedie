@@ -22,6 +22,7 @@ gem 'aws-sdk', '~> 2.0'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 gem 'bootstrap', '>=4.0.0.alpha3'
 gem 'exception_notification'
+gem 'slack-notifier'
 gem 'browser'
 
 group :development do
