@@ -75,6 +75,9 @@
                 <li><%= link_to 'Abecední seznam Komedií', comedy_thumbnails_path %></li>
                 <li><%= link_to 'Plakáty', images_path %></li>
                 <li><%= link_to 'Trailery', videos_path %></li>
+                <% if current_user.present? && !current_user.anonymous? %>
+                  <li><%= link_to 'Odhlásit', sessions_destroy_path, method: :delete %></li>
+                <% end %>
               </ul>
             </div>
 
