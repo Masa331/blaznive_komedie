@@ -36,4 +36,10 @@ class ApplicationController < ActionController::Base
   def load_random_comedies
     @random_comedies = Comedy.random
   end
+
+  def restrict_only_admins
+    unless current_user.admin?
+      redirect_to root_path, notice: 'Na tuto stránku mají přístup pouze admini.'
+    end
+  end
 end

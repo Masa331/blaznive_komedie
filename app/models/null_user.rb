@@ -3,6 +3,10 @@ class NullUser
     'Anonymni uzivatel'
   end
 
+  def admin?
+    false
+  end
+
   def anonymous?
     true
   end

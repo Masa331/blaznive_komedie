@@ -1,11 +1,9 @@
 class SessionsController < ApplicationController
-  ADMIN_EMAIL = 'pdonat@seznam.cz'
-
   def create
     user = User.where(login_token: params[:token]).where('login_token_valid_until > ?', Time.now).first
 
     if user
-      if user.email != ADMIN_EMAIL
+      unless user.admin?
         redirect_to root_path, alert: 'Přihlášení se nezdařilo. Zatím funguje přihlašování pouze pro adminy.'
         return
       end

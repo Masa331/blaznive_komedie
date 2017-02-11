@@ -1,5 +1,5 @@
 class ComediesController < ApplicationController
-  http_basic_authenticate_with name: Rails.application.secrets.admin_login, password: Rails.application.secrets.admin_password, except: [:index, :show]
+  before_action :restrict_only_admins, only: [:new, :create]
 
   def show
     @comedy          = Comedy.find(params[:id])
@@ -24,8 +24,8 @@ class ComediesController < ApplicationController
   end
 
   def new
-    @tags = ActsAsTaggableOn::Tag.all
     @comedy_form = ComedyForm.new
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   def create
@@ -34,13 +34,33 @@ class ComediesController < ApplicationController
     if @comedy_form.save
       redirect_to comedies_path
     else
+      @tags = ActsAsTaggableOn::Tag.all
       render :new
+    end
+  end
+
+  def edit
+    comedy = Comedy.find(params[:id])
+    @comedy_form = ComedyForm.new(comedy: comedy)
+    @tags = ActsAsTaggableOn::Tag.all
+  end
+
+  def update
+    comedy = Comedy.find(params[:id])
+    @comedy_form = ComedyForm.new(comedy: comedy)
+    @comedy_form.assign_attributes(permitted_params)
+
+    if @comedy_form.save
+      redirect_to comedy_path(comedy)
+    else
+      @tags = ActsAsTaggableOn::Tag.all
+      render :edit
     end
   end
 
   private
 
   def permitted_params
-    params.require(:comedy_form).permit(:cz_title, :en_title, :text, :tag_list, :image_title, :video_title, :video_link, :uploaded_image)
+    params.require(:comedy_form).permit(:cz_title, :en_title, :text, :tag_list, :image_title, :video_title, :youtube_link_uri, :image_image)
   end
 end
