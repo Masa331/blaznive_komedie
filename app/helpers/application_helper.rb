@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def tag_with_link(tag)
-    content_tag :span, class: "label label-pill label-default" do
+    content_tag :span, class: "badge badge-pill badge-default" do
       link_to tag, search_results_path(search_term: tag)
     end
   end
