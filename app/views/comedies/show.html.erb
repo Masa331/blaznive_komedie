@@ -4,7 +4,6 @@
   <div class="entry-body">
     <div class="row">
       <div class="col-xl-8">
-          <% require 'pry'; binding.pry %>
         <% if @comedy.image.present? && @comedy.image.image_url.present? %>
           <%= image_tag @comedy.image.image_url, class: 'img-fluid' %>
         <% end %>
